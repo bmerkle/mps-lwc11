@@ -78,3 +78,27 @@ The syntax is relatively boring, because we didn't define any fancy syntax for t
 Selecting the closing curly brace of the person entity, you can now press enter to add new entities. This completes the first iteration. We can now continue to add attributes for the entities.
 
 == Adding Attributes to Entities ==
+
+Next up is the attributes. Attributes, as usual, have names and types. Types can either be primitive (int, string, etc.) or references to other entities. 
+
+We start by creating two new concepts: _EntityAttribute_ and _Type_. _EntityAttribute_ implements _INamedConcept_ so we get the _name_ attribute. _Type_ is an abstract concept because we will create several subconcepts later. A concept can be marked _abstract_ by selecting the abstract property in the _concept properties_ section of concepts. Since _EntityAttributes_ have a type, we create the corresponding child relationhip. This leads to the following structure:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-typeAndAttribute.png
+
+Please add a new child relationship called type, of type _Type_ (cardinality 1..1) to _Entity Attribute_. We also want to make sure that _Entity_ gets a new child relationship to _EntityAttribute_ named _attributes_ (cardinality 0..n). 
+
+Now let us create the primitive subtypes of _Type_. We first create another abstract concept _PrimitiveType_ which extends the _Type_ concept. Then we create three non-abstract concepts _IntType_, _StringType_ and _BoolType_ which all extend _PrimitiveType_. 
+
+Let's now define the editor for these primitive types, because these editors are trivial. The editor for _IntType_, for example is simply a _constant_ cell with the value "int" -- and similar for string and bool. Notice that we don't need editors for the two abstract concepts, because they can never be instantiated and hence never need a visual representation.
+
+Let us now focus on the editor for _EntityAttribute_. Please create a new and empty editor, as explained above. Then add a indent collection, with two cells in it: the first one is the type of the attribute. Press control-space and enter a percent sign; this will show all child relationships of the current concept. Select %type%. This will project the type as the first element in the indent collection. Then add the name property, by pressing control-space and entering an opening curly brace, and select name. This concludes the editor for _EntityAttribute_, the result should look like the next screenshot.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-attributeEditor.png
+
+There is only one thing remaining to be done: the extension of the _Entity_ editor to include the list of attributes. You do this by adding a vertical child cell collection and selecting the attributes child collection. To make sure this collection of attributes is shown on a new line, and indented, you have to add two layouting properties in the inspector, as shown in the next illustration.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditorWithAttributes.png
+
+
+
+
