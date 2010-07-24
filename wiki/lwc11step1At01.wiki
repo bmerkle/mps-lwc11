@@ -36,4 +36,22 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-crea
 
 At this point we are finished with the definition of the structure of our first two concepts. To make them usable in the editor we have to define the syntax, or in MPS terminology, the editor. Let's start with the entity.
 
-If you double-click on your Entity concept, the structure editor for Entity should open. You can then select editor tab. If you click into the blank editor, you can create a new concept editor. After you do this you should have an empty editor, into which you can add your projection rules.
+If you double-click on your Entity concept, the structure editor for Entity should open. You can then select editor tab. If you click into the blank editor, you can create a new concept editor. After you do this you should have an empty editor, into which you can add your projection rules. The result of adding the projection rules should look like the following (notice that our entities don't have attributes yet):
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditor1.png
+
+Some explanations are in order. The 
+
+{{{
+[-
+
+-]
+}}}
+
+syntax refers to so-called indent collections. These are collections that behave more or less like flowing text, I will explain details below. Within this collection refers have a keyword entity. Keywords are called constants in the MPS editor. So after selecting the indent collection from the code completion menu, you should then select _constant_ from the code completion menu. Once you have inserted the constant, you can specify the string value, "entity". 
+
+The next element in the collection is the name of the entity. Insert a new empty cell into the indent collection (by pressing enter or insert), and then press control-space and enter an opening curly brace so you can select from the available primitive properties; that name property. This means that the cell projects the name of the entity (remember you get the name property by inheriting from the _INamedConcpet_ interface.) 
+
+Now enter two additional constants for the opening and closing curly brace. At this point all the cells in the indent collection are shown in one line. If you want to force line breaks, for example, in front of the closing curly brace, you have to select the respective cell property as shown in the following screenshot. You can't open the inspector window by pressing Alt-2 or by selecting Window->Tool Windows->Inspector from the menu (you will need the inspector all the time, so keep it open).
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditor2.png
