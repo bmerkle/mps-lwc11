@@ -9,7 +9,7 @@ Build a simple data definition language to define entities with properties. Prop
 
 = Details =
 
-== Creating a Language ==
+== Creating a Project, Language and Solution ==
 
 To get started, we first create a new project using the File->New Project menu item. The name for the project is of course arbitrary, but we call it lwc11. When creating the project, the wizard prompts us to also create a language and a sandbox solution. We accept these proposals, and call the language _entities_, and the solution _lwc11demo_.  
 
