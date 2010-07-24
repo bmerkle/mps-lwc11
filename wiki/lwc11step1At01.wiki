@@ -36,6 +36,8 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-crea
 
 At this point we are finished with the definition of the structure of our first two concepts. To make them usable in the editor we have to define the syntax, or in MPS terminology, the editor. Let's start with the entity.
 
+== Defining an Editor == 
+
 If you double-click on your Entity concept, the structure editor for Entity should open. You can then select editor tab. If you click into the blank editor, you can create a new concept editor. After you do this you should have an empty editor, into which you can add your projection rules. The result of adding the projection rules should look like the following (notice that our entities don't have attributes yet):
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditor1.png
@@ -55,3 +57,24 @@ The next element in the collection is the name of the entity. Insert a new empty
 Now enter two additional constants for the opening and closing curly brace. At this point all the cells in the indent collection are shown in one line. If you want to force line breaks, for example, in front of the closing curly brace, you have to select the respective cell property as shown in the following screenshot. You can't open the inspector window by pressing Alt-2 or by selecting Window->Tool Windows->Inspector from the menu (you will need the inspector all the time, so keep it open).
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditor2.png
+
+At this point we are finished defining the editor for the entity (at least for the time being), and we can now define the editor for the resource. Create a new empty editor for EntityResource in the same way as explained for the entity above. This editor should only contain the list of entities, the entity resource contains. The next screenshot shows the resulting editor.
+
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityResourceEditor.png
+
+The editor itself contains only one cell. It is a vertical child collection. So in the editor definition press control-space and select "child node cell list (vertical)" from the context menu. To complete the editor, you have to select a collection of children of the entity resource that should actually be projected in that list. Put the cursor into the red "no link" cell, and press control-space. You should be able to select the "entities" collection.
+
+== Defining a simple model ==
+
+This finishes the definition (at least the first iteration) of the language, and we can go to the previously created solution and create an example instance.
+
+So in the solution, use the context menu to create a new model. Its name does not matter. Selecting the context menu of this new model, you should be able to create an instance of _EntityResource_, because it is a rootable concept. This should look like the following:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-firstSolution.png
+
+The syntax is relatively boring, because we didn't define any fancy syntax for the entity resource, it simply contains a collection of entities. The symbol you see represents this empty collection. You put the cursor into this field, you can either press enter or type "entity" (remember the alias) to create a new entity. Notice how the syntax of the newly created entity resembles the editor we defined above. You can now go ahead and enter a name for the new entity, for example "Person". 
+
+Selecting the closing curly brace of the person entity, you can now press enter to add new entities. This completes the first iteration. We can now continue to add attributes for the entities.
+
+== Adding Attributes to Entities ==
