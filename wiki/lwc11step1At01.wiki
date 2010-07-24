@@ -17,4 +17,4 @@ The point of the solution created during projects set up is that this solution a
 
 The explorer should look something like the following after doing this.
 
-http://code.google.com/p/mps-lwc11/lwc11/wiki-images/lwc11step1At01-afterCreatingProject.png
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-afterCreatingProject.png
