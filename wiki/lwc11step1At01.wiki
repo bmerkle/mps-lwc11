@@ -18,3 +18,21 @@ The point of the solution created during projects set up is that this solution a
 The explorer should look something like the following after doing this.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-afterCreatingProject.png
+
+
+== Creating the first language concepts ==
+
+In MPS what is typically called a metaclass is called a language concept, or _concept_ for short. Because MPS is a projectional editor, languages are actually defined by first defining the structure of the language concepts. 
+
+Based on the task we are supposed to implement, it is obvious that we need a language concept called _Entity_. So let's create it. In the _structure_ part of your _entities_ language select New->concept from the context menu. Name your new concept _Entity_ and make sure it implements the _INamedConcept_ interface. This adds a _name_ property to our new concept. Using the predefined interface is better than just adding a string property _name_, because a couple of default MPS functionalities depend on the _INamedConcept_ interface. You should also define an alias for your concept, the alias is the text string that is used to instantiate a concept in the editor, we will illustrate this below. The next screenshot shows the result of this step.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-creatingTheEntityConcept.png
+
+In MPS, projects contrain languages and solutions. A solution is a container for non-language things. A solution and alanguage in turn consist of models. A model corresponds to a physical resource, basically an XML file. Each model contains any number of root notes, which are instances of concepts that half there _can Be Root_ property set to _true_. In our example, we want to make sure that a model can contain several entities, so we add an additional language concept that acts as a container for entities and is itself a rootable concept. We call this concept _EntityReource_. Please use the same approach as above to create this new concept.
+
+As we just said, the EntityResource should contain any number of entities. To enable this, we must add a child relationship the entity resource. The following screenshot should be self explaining and shows the result.
+
+
+
+
+
