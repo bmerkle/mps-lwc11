@@ -99,6 +99,24 @@ There is only one thing remaining to be done: the extension of the _Entity_ edit
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditorWithAttributes.png
 
+The last step to completion of this first task is the ability to use other entities as types for attributes. We have a dilemma here: the type of _EntityAttributes_ is the abstract concept _Type_. But entities don't extend _Type_! Also, we don't want to create a new entitiy as the type of an attribute, we want to reference an existing one.
+
+We solve this dilemma by creating a new concept called _EntityType_ which extends _Type_. We add to this new concept a reference relationship (make sure you don't accidentally make it a child!) called entity with a cardinality of 1:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityType.png
+
+The editor for this _EntityType_ concept is simple, is only the reference:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityTypeEditor.png
+
+There is only one cell, selected by pressing the percent key in the code completion menu. However, since this is a reference to an existing element (another entity), you have to define which of the referenced entity's properties should be used to represent the reference to the entity. In the red-backgrounded cell, press control space and select the name property. This makes sure the target entity's name is used to represent the reference.
+
+This concludes the definition of the language, and we can go back to trying it out.
+
+== Playing with the entities Language ==
+
+
+
 
 
 
