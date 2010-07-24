@@ -1,0 +1,10 @@
+#summary Implementation of Step 1, 0.1
+
+= Task =
+
+0.1 Simple (structural) DSL without any fancy expression language or such.
+
+Build a simple data definition language to define entities with properties. Properties have a name and a type. It should be possible to use primitive types for properties, as well as other Entities.
+
+
+= Details =
