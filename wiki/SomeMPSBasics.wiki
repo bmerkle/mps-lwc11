@@ -26,6 +26,16 @@ As of now, there is no real debugger that can be used the "meta programs", excep
 
 = Generation Trace =
 
+When transforming models, you may want to trace how your model is transformed into other models, possibly over several intermediate stages. You can do this by enabling the Save Transient Models flag in the Generate menu. If you then generate models, you will find a new tree node Transient Models at the very end of the explorer.
 
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/someMPSBasics-transientModels.png
+
+If you open it, you can see the various intermediate stages of translation. Double clicking a root concept opens the respective (transient) model for inspection. You can then select any element and select Generation Trace and Generation Traceback from the context menu. This will show you into what the selected element has been generated (or what it has been generated from), including the translation templates that had been involved.
+
+The following screenshot shows this. I have opened the marked EntityResource element (in the first transient model). I have then selected a complete attribute ("string name") and commanded "Generation Trace". In the Generation Trace window at the bottom left you can see, in the tree view, into what this attribute was generated. You can double click onto each of these elements to inspect those.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/someMPSBasics-traceback.png
+
+= Using the Explorer =
 
 
