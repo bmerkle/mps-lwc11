@@ -1,0 +1,11 @@
+#summary Implementation of Step 2, 0.2
+
+= Task =
+
+0.2 Code generation to GPL such as Java, C#, C++ or XML
+
+Generate Java Beans (or some equivalent data structure in C#, Scala, etc.) with setters, getters and fields for the properties.
+
+
+
+= Details =
