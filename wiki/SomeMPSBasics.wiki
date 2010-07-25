@@ -1,0 +1,9 @@
+#summary Some tipps and tricks about how to work with MPS
+
+Working with MPS is a little bit different because it is not an ASCII text editor but rather a projectional editor. Editing operations directly change the tree. Hence the editing gestures are quite a bit different. Also, sometimes you need to know where to look in order to achieve something. This page provides a couple of hints.
+
+= Editing =
+
+Editing is best shown with a screencast, because one can better show and explain how things work. We will add a screencast illustrating this in the near future.
+
+There is one important thing, though: you can only ever enter what's available in the code completion menu (unless you're entering a string value, of course). 
