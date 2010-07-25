@@ -31,5 +31,21 @@ As the heading suggests, we want to create a Java class. Since we don't simply g
 
 Let's now create a root mapping rule (by pressing enter in the respective slot). For the concept, choose _Entity_. You now have to specify the template that performs the transformation. In the respective slot, press alt-enter and select "New Root Template". From the popup menu that shows up then, select _class_. The result should look like this:
 
-
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-mappingRule.png
+
+You can now ctrl-click onto the template name in the mapping configuration to open the newly created template. It should look somethíng like this:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template0.png
+
+Notice how it resembles a valid, complete Java class! This is because MPS uses the same projectional approach in templates it uses for any other piece of code. Because you've selected a _class_ as the thing to be generated, a complete, yet "empty" class is shown in the template.
+
+We now have to make the template sensible. The first thing we want to do is change the name of the generated class. It should be the name of the entity from which the class is generated, maybe with some kind of suffix or something. 
+
+Tempaltes in MPS work the following way: you first write valid example code. Then you annotate this code with "replacement rules", called macros. In our case, we have already writte valid example code: the class. We now have to replace the name with something that is derived from the input node (the Entity). We use a property macro for that (because we want to change the value of a propery, the class name). Put the cursor onto the class name (map_Entity) and press alt-enter. Then select "Add Property Macro". In the inspector (open it with Alt-2 if it is not visible) you can now see an empty function body. This function is used to calculate the value that should be used as the new value for the property we're replacing. In our case we put the following code, to calculate the class name (note how the _node_ variable referneces the current context, in this case, the input node of type _Entity_).
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template1-propertyMacro.png
+
+At this point we have functioning, albeit incomplete, template.
+
+
+
