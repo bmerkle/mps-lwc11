@@ -6,6 +6,10 @@
 
 Generate Java Beans (or some equivalent data structure in C#, Scala, etc.) with setters, getters and fields for the properties.
 
-
-
 = Details =
+
+This step is intended to demonstrate code generation. In MPS, however, there is no real code generation per se. Everything is a model-to-model transformation (there is even a meta model for text (lines, words, lists)). 
+
+Specifically, since MPS comes with an implementation of Java (called Base Language), generating Java Beans, as requested by this task, is actually the creation of a "Java model". 
+
+Let us look at the implementation to make this clearer.
