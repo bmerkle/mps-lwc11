@@ -20,9 +20,11 @@ Pressing enter in a cell adds another cell after the current one. Pressing Inser
 
 If something does not work, you can always use Check Model or Check Language from the respective context menus. This will give you a list of all the errors in your code. 
 
+= Debugging =
+
+As of now, there is no real debugger that can be used the "meta programs", except the generation trace (see below). So you have to revert to "printf-debugging". In any base language program you can use the shortcut _sout_ to expand into a System.out.println() statement. To see the output, make sure you start MPS with java.exe, not javaw.exe. You can change this in the mps.bat file that starts MPS.
+
 = Generation Trace =
-
-
 
 
 
