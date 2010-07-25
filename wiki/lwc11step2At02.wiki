@@ -91,6 +91,24 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-temp
 
 COPY_SRC macros invoke existing reduction rules (see below) to in-place translate the node  that is returned in the macro function. Because our function returns the type of the attributes, reduction rules that are defined for the _Type_ subtypes are executed automatically. The next step, thus, has to be to define these reduction rules.
 
+We go back to the mapping configuration and press enter in the reduction rules section. This gives us a new, empty reduction rule. Starting with a reduction rule for strings, we select _StringType_ as the applicable concept in the reduction rule (make sure you actually select the one from the entities language). In the consequences slot, we don't create a new template as we did before; rather, we press ctrl-space and select inline template, which means that the thing we reduce to is directly specified in the mapping configuration. This is useful for small, simple templates. In this case, we simply want to generate a Java string type. So we simply select _StringType_, this time the one from j.m.baseLanguage. That's all! We do the same for booleans and ints.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template2-typeReduction.png
+
+At this point, entities with primitive attributes would work. However, there's still the special case where the type of an attribute is a reference to another Entity. We have implemented this using the _EntityType_ concept which extends _Type_ and references another _Entity_.
+
+So we define another reduction rule, this time for _EntityType_, and create another inline template for it. The template should generate a type that represents a Java class (the one we generated from the target Entity). In the base language, the concept that represents "types that are Java classes" is called _ClassifierType_. So we instantiate a _ClassifierType_ by selecting it from the code completion menu in the inline template. This then looks like the following:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-classifierType.png
+
+The reason why this looks a little bit strange is because the editor for _ClassifierType_ simply shows the referenced class's name. Since we haven't selected a class yet, it looks the way it looks. So let's select a class. As we're going to replace it with a macro anyway, it doesn't matter which class you reference here. Just select any class -- for example, _Character_.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-classifierTypeCharacter.png
+
+We now use a so-called reference macro to make it point to something else (this being the class we generated from the entity that's referenced in the _EntityType_). Press alt-enter and select Add Reference Macro. This brings us to the following.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-classifierTypeCharacterWithMacro.png
+
 
 
 
