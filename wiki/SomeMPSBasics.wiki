@@ -16,6 +16,11 @@ Also, some things (e.g. in the editor definition) must be specified in the inspe
 
 Pressing enter in a cell adds another cell after the current one. Pressing Insert adds one before the current one.
 
+= Checking =
+
+If something does not work, you can always use Check Model or Check Language from the respective context menus. This will give you a list of all the errors in your code. 
+
+= Generation Trace =
 
 
 
