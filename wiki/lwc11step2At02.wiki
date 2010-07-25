@@ -70,3 +70,27 @@ public class PersonBean {
 }}}
 
 You could also select Generate Files, in which case the actual files are generated and written to disk for subsequent compilation.
+
+Let us now add some contents to the class. Let's start with creating a private member for each of the entity's attributes. As before, we start by writing valid example code:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template2-properties.png
+
+Now we need to iterate. We want to create one of these private members for each of the attributes of the Entity. To do this, we select the whole member declaration and press alt-enter, and we select Add Node Macro. The cursor is placed between the two dollar signs automatically, and we type LOOP and press enter. We have just created a loop macro. The cursor is automatically placed into the function in the inspector. We type an expression that iterates over all the attributes of the input Entity.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template2-propertiesLOOP.png
+
+At this point the system would generate *the same* member for each of the attributes; this of course makes no sense. We need to make the types and names of the members change for each of the attributes of the entity. 
+
+We start with the name and use another property macro (see above). Note how the _node_ variable in the body now refers to the Entity's attribute because "outside" of the current property macro we iterate over the attributes in LOOP.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template2-propertiesLOOPPropMacro.png
+
+Now we need to handle the type of the attributes. Since we had defined our own types (StringType, IntType, BoolType) we have to translate them into Java types. So what we do is this: in this first state, we assume that "someone, somehow" knows how to reduce our own types into corresponding Java types. So we simply add a COPY_SRC macro here:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template2-propertiesTypeCOPYSRC.png
+
+COPY_SRC macros invoke existing reduction rules (see below) to in-place translate the node  that is returned in the macro function. Because our function returns the type of the attributes, reduction rules that are defined for the _Type_ subtypes are executed automatically. The next step, thus, has to be to define these reduction rules.
+
+
+
+
