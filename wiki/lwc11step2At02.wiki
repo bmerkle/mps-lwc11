@@ -13,3 +13,23 @@ This step is intended to demonstrate code generation. In MPS, however, there is 
 Specifically, since MPS comes with an implementation of Java (called Base Language), generating Java Beans, as requested by this task, is actually the creation of a "Java model". 
 
 Let us look at the implementation to make this clearer.
+
+== Defining a Generator ==
+
+The first step we have to perform is to create a generator (note that although these things are actually model transformations, the "container" that contains them is called a generator). Use the context menu on the entities language to run New->Generator to create one. The generator's name doesn't really matter, I usually call it main. The result should look something like this.
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-newGenerator.png
+
+The important content of the generator at this point is the so-called mapping configuration. This is a configuration that determines which language concepts are transformed how. These mapping configurations have different kinds of rules. We will need two of these:
+
+  * root mapping rules are used to map concepts into a root concept (those with "can be root" set to true). In the generator we're currently building, we'll use one of these to map entities to Java classes.
+  * reduction rules are used to replace a concept with another concept. The original concept is replaced (at the same location!) with the result of the transformation rule. We will use this here for the types of attributes.
+
+== Mapping the Entity to a Java Class ==
+
+As the heading suggests, we want to create a Java class. Since we don't simply generate text, but rather "instantiate" a _Class_ concept from the Java implementation in MPS, we first have to make sure Java is actually available in our language project. Right-click on the entities language and select Language Properties. Go to the Dependencies tab and press the little plus symbol in the Used Languages section. Select jetbrains.mps.baseLanguage.
+
+Let's now create a root mapping rule (by pressing enter in the respective slot). For the concept, choose _Entity_. You now have to specify the template that performs the transformation. In the respective slot, press alt-enter and select "New Root Template". From the popup menu that shows up then, select _class_. The result should look like this:
+
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-mappingRule.png
