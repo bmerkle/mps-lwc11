@@ -35,4 +35,48 @@ There are also constraints that can be used to validate the tree structure beyon
   * can be parent: you get the concept passed in you could instantiate (it's not yet a node because the constraint is evaluated before the tree is constructed!) and you determine whether this kind of child would be valid. For example, if I added the code !(childConcept == concept/Entity/); as the can be parent constraint for EntityResource, it would not be valid to add Entities below an EntityResource. Note how this constraint is written from the perspective of the parent, i.e. you modify the parent concept.
   * can be ancestor is like can be child, but it works recursively down the tree, i.e. the children don't have to be direct children. For example, if I wrote !(childConcept == concept/EntityType/); in the can be ancestor constraint for EntityResource, I could not add any EntityTypes as descendents at any nesting level below EntityResource. Note that this one is potentially much slower than the can be child, so use the latter whenever possible.
     
-== Cross-Concept Constraints ==
+  
+    
+= Cross-Concept Constraints =
+
+Cross-concept constraints are those that affect (or potentially, could affect) more than one element. You can find
+all of them hosted in the typesystem language aspect. 
+
+One class of constraints is the typesystem itself. We'll talk about this later when we talk about - type systems :)
+
+There is one odd one in the type system rules: the NonTypesystemRule :-) This is the one we use to implement the
+name uniqueness.
+
+Go to the type system aspect and use the context menu to create a NonTypesystemRule. Give it a name (such as 
+"checkNameUniqueness") and in the condition slot press control space to select the concept option. This leads to:
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames1.png
+
+We then have to define, for which concept this check should be applicable. We want to write a constraint that
+checks that attribute names are unique. We write this constraint from the perspective of the Attribute, by checking
+if in the Attribute's parent's attributes there are more than one that have the name of the attribute for which we
+run the check (actually, this very statement is easier to program than to say :-)) So we select _EntityAttribute_ 
+as the concept and give it a reasonably short local name (the one after the "as").
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames2.png
+
+Now we have to implement the actual check. 
+
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames3.png
+
+Let's look at the code in detail:
+
+{{{
+attribute   // this is the local name of the current instance 
+.parent     // predefined MPS property that returns the owner of the current element
+: Entity    // colon is the node-typecast. It casts the parent down to node<Entity>
+.attributes // returns all the attributes of that owning Entity
+.where({~it => it.name == attribute.name; })  // select only those whose name is the name as the current node's name
+.size > 1   // and then check if there's more than one element in the resulting collection
+}}}
+
+The error construct defines the error message to be output, as well as the node to which the error
+message should be associated with. Alternatively, there is also a warning construct.
+
+After rebuilding the language, you can try to add two attributes with the same name. If you do, these two are both
+underlined red, and you also get the error messages reported in the model checker.
