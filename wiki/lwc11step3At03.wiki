@@ -13,7 +13,7 @@ MPS has different kinds of constraints which we'll describe briefly here. For th
 
 == Concept-specific Constraints ==
 
-Influence tree construction!
+Note that all of these constraints are not "just" constraints in the sense that they check an existing model. Rather, they prevent a potentially wrong model from being built; this means, they affect code completion as well.
 
 Reference constraints define which nodes are valid targets for a reference (a pointer). The constraint returns the set of valid target nodes. These kinds of constraints are otherwise known as scopes and are demonstrated in a later step of this tutorial.
 
