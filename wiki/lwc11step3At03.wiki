@@ -11,7 +11,7 @@ For example, check the name uniqueness of the properties in the entities.
 MPS has different kinds of constraints which we'll describe briefly here. For the 0.3 task we will only need one of them.
 
 
-= Concept-specific Constraints =
+== Concept-specific Constraints ==
 
 Influence tree construction!
 
@@ -35,6 +35,4 @@ There are also constraints that can be used to validate the tree structure beyon
   * can be parent: you get the concept passed in you could instantiate (it's not yet a node because the constraint is evaluated before the tree is constructed!) and you determine whether this kind of child would be valid. For example, if I added the code !(childConcept == concept/Entity/); as the can be parent constraint for EntityResource, it would not be valid to add Entities below an EntityResource. Note how this constraint is written from the perspective of the parent, i.e. you modify the parent concept.
   * can be ancestor is like can be child, but it works recursively down the tree, i.e. the children don't have to be direct children. For example, if I wrote !(childConcept == concept/EntityType/); in the can be ancestor constraint for EntityResource, I could not add any EntityTypes as descendents at any nesting level below EntityResource. Note that this one is potentially much slower than the can be child, so use the latter whenever possible.
     
-= Cross-Concept Constraints =
-
-
+== Cross-Concept Constraints ==
