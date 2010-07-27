@@ -6,6 +6,10 @@
 
 For example, check the name uniqueness of the properties in the entities.
 
+= Code =
+
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-3-at03.zip
+
 = Details =
 
 MPS has different kinds of constraints which we'll describe briefly here. For the 0.3 task we will only need one of them.
