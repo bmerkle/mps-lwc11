@@ -6,6 +6,10 @@
 
 For example, put the Car and Person entities into different files, while still having the Person -> Car reference work.
 
+= Code =
+
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-4-at04.zip
+
 = Details =
 
 In MPS the files, called "models", act as a container for potentially many elements. The physical structure is independent of the logical structure. For example, you can have many root nodes in each model; the model really is more like a repository. 
