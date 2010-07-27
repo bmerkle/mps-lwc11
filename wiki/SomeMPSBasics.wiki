@@ -18,6 +18,8 @@ Pressing enter in a cell adds another cell after the current one. Pressing Inser
 ´
 Pressing Ctrl-S on any element opens its concept.
 
+Another very useful "trick" is the Go Back functionality, that incrementally goes back to previous edit locations. I have used the Settings to assign the Alt-Backspace keyboard shortcut just like in current browsers. Very useful.
+
 = Checking =
 
 If something does not work, you can always use Check Model or Check Language from the respective context menus. This will give you a list of all the errors in your code. 
