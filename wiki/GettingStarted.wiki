@@ -5,3 +5,11 @@
 This set of Wiki pages is the documentation for the LWC11 language workbench competition described here: http://www.languageworkbenches.net/
 
 The PDF below outlines a task that will be implemented with various different language workbenches: http://www.delphino-consultancy.nl/lwc/contest.html
+
+The task is relatively trivial. But it has been designed to illustrate as many properties of language workbenches as possible. As such, it can serve as a good introduction to the respective tools.
+
+This tutorial expects that you have heard about MPS and how it works in general before. We start almost at the beginning, but not quite :-)
+
+= Detailed Documentation =
+
+  * [http://code.google.com/p/mps-lwc11/wiki/SomeMPSBasics Basics] A couple of tipps and tricks for working with MPS. Recommended Reading!
