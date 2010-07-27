@@ -1,0 +1,7 @@
+#summary Start Reading here!
+
+= Introduction =
+
+This set of Wiki pages is the documentation for the LWC11 language workbench competition described here: http://www.languageworkbenches.net/
+
+The PDF below outlines a task that will be implemented with various different language workbenches: http://www.delphino-consultancy.nl/lwc/contest.html
