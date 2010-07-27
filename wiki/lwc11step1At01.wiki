@@ -6,6 +6,9 @@
 
 Build a simple data definition language to define entities with properties. Properties have a name and a type. It should be possible to use primitive types for properties, as well as other Entities.
 
+= Code =
+
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-1-at01.zip
 
 = Details =
 
@@ -120,6 +123,4 @@ You should now be able to define models like the following:
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-playingWithTheLanguage.png
 
 When you press control-space when defining the type, you can select between the primitives, but you can also select any of the other entities. This is because there is a little bit of magic going on: whenever a concept has exactly one 1..1 reference, then MPS calls this a Smart Reference. In this case, when you press control space, the system doesn't propose to instantiate the concept (here: the _EntityType_). Instead it directly shows in the code completion menu all those elements that would be valid targets of the single 1..1 reference in the concept (here: all entities). When you select one, the Smart Reference object (here: _EntityType_) is transparently instantiated and the reference populated with the selected target.
-
-
 
