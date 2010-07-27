@@ -6,6 +6,10 @@
 
 Generate Java Beans (or some equivalent data structure in C#, Scala, etc.) with setters, getters and fields for the properties.
 
+= Code =
+
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-2-at02.zip
+
 = Details =
 
 This step is intended to demonstrate code generation. In MPS, however, there is no real code generation per se. Everything is a model-to-model transformation (there is even a meta model for text (lines, words, lists)). 
@@ -243,8 +247,6 @@ public class PersonBean {
 
 -------------------------------------------------------------------------------
 }}}
-
-
 
 
 
