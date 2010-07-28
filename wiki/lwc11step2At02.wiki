@@ -109,7 +109,7 @@ The reason why this looks a little bit strange is because the editor for _Classi
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-classifierTypeCharacter.png
 
-We now use a so-called reference macro to make it point to something else (this being the class we generated from the entity that's referenced in the _EntityType_). Press alt-enter and select Add Reference Macro. This brings us to the following.
+We now use a so-called "reference macro" to make it point to something else (this being the class we generated from the entity that's referenced in the _EntityType_). Press alt-enter and select "Add Reference Macro". This brings us to the following.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-classifierTypeCharacterWithMacro.png
 
@@ -159,7 +159,7 @@ public class PersonBean {
 -------------------------------------------------------------------------------
 }}}
 
-So. Except for the getters and setters we're pretty much done. These are, however, real easy, since we already have all the ingredients we need:
+Except for the getters and setters we're pretty much done. These are, however, real easy, since we already have all the ingredients we need:
 
   * we first write an example setter
   * we then add a LOOP macro around the whole setter, iterating over all attributes of our input entity
@@ -247,5 +247,3 @@ public class PersonBean {
 
 -------------------------------------------------------------------------------
 }}}
-
-
