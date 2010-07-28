@@ -106,12 +106,6 @@
         </node>
       </node>
     </node>
-    <node role="reductionMappingRule:2" type="jetbrains.mps.lang.generator.structure.Reduction_MappingRule:2" id="5302941284447748595">
-      <link role="applicableConcept:2" targetNodeId="1.5302941284447748590" resolveInfo="DummyStatement" />
-      <node role="ruleConsequence:2" type="jetbrains.mps.lang.generator.structure.TemplateDeclarationReference:2" id="5302941284447749655">
-        <link role="template:2" targetNodeId="5302941284447749653" resolveInfo="reduce_DummyStatement" />
-      </node>
-    </node>
     <node role="reductionMappingRule:2" type="jetbrains.mps.lang.generator.structure.Reduction_MappingRule:2" id="1594555752161769474">
       <link role="applicableConcept:2" targetNodeId="2v.1068498886294:3" resolveInfo="AssignmentExpression" />
       <node role="conditionFunction:2" type="jetbrains.mps.lang.generator.structure.BaseMappingRule_Condition:2" id="1594555752161769529">
