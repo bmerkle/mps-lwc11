@@ -46,6 +46,9 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-mapp
 
 You can now ctrl-click onto the template name in the mapping configuration to open the newly created template. It should look somethíng like this:
 
+TODO:
+wrong screenshot there should be no mapping labels. They are introduced later.
+
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template0.png
 
 Notice how it resembles a valid, complete Java class! This is because MPS uses the same projectional approach in templates it uses for any other piece of code. Because you've selected a _class_ as the thing to be generated, a complete, yet "empty" class is shown in the template.
