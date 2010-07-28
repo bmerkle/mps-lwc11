@@ -83,6 +83,8 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-firs
 
 The syntax is relatively boring, because we didn't define any fancy syntax for the _Entity Resource_, it simply contains a collection of entities. The symbol you see represents this empty collection. You put the cursor into this field, you can either press enter or type "entity" (remember the alias) to create a new entity. Notice how the syntax of the newly created entity resembles the editor we defined above. You can now go ahead and enter a name for the new entity, for example "Person". 
 
+TODO: we should add a screenshot here
+
 Selecting the closing curly brace of the person entity, you can now press enter to add new entities. This completes the first iteration. We can now continue to add attributes for the entities.
 
 == Adding Attributes to Entities ==
@@ -95,7 +97,7 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-type
 
 Please add a new child relationship called type, of type _Type_ (cardinality 1..1) to _Entity Attribute_. We also want to make sure that _Entity_ gets a new child relationship to _EntityAttribute_ named _attributes_ (cardinality 0..n). 
 
-Now let us create the primitive subtypes of _Type_. We first create another abstract concept _PrimitiveType_ which extends the _Type_ concept. Then we create three non-abstract concepts _IntType_, _StringType_ and _BoolType_ which all extend _PrimitiveType_. 
+Now let us create the primitive subtypes of _Type_. We first create another abstract concept _PrimitiveType_ which extends the _Type_ concept. Then we create three non-abstract concepts _IntType_, _StringType_ and _BoolType_ which all extend _PrimitiveType_. Also these three types should have aliases like int, string and bool.
 
 Let's now define the editor for these primitive types, because these editors are trivial. The editor for _IntType_, for example is simply a _constant_ cell with the value "int" -- and similar for string and bool. Notice that we don't need editors for the two abstract concepts, because they can never be instantiated and hence never need a visual representation.
 
