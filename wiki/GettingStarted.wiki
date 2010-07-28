@@ -18,7 +18,9 @@ This tutorial expects that you have heard about MPS and how it works in general 
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step3At03 Task 0.3] Simple constraint checks such as name-uniqueness
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step4At04 Task 0.4] Show how to break down a (large) model into several parts, while still cross-referencing between the parts.
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step5At11 Task 1.1] Show the integration of several languages.
-  
+  * [http://code.google.com/p/mps-lwc11/wiki/lwc11step6At15 Task 1.5] Integrating manually written code (again in Java, C# or C++)
+
+
 = Feedback = 
 
 If you have feedback, suggestions, or some free energy to contribute, please contact Markus Voelter at mailto:voelter@acm.org
