@@ -93,7 +93,7 @@
     <node role="contents:0" type="entities.structure.Entity:0" id="1594555752161606182">
       <property name="name:0" value="Building" />
       <node role="attributes:0" type="entities.structure.EntityAttribute:0" id="1594555752161760331">
-        <property name="name:0" value="tyoe" />
+        <property name="name:0" value="type" />
         <node role="type:0" type="jetbrains.mps.baseLanguage.structure.StringType:3" id="1594555752161760332" />
       </node>
       <node role="attributes:0" type="entities.structure.EntityAttribute:0" id="1594555752161760333">
