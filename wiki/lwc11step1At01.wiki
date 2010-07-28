@@ -62,7 +62,7 @@ Now enter two additional constants for the opening and closing curly brace. At t
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditor2.png
 
-At this point we are finished defining the editor for the _Entity_ (at least for the time being), and we can now define the editor for the resource. Create a new empty editor for _EntityResource_ in the same way as explained for the _Entity_ above. This editor should only contain the list of entities, the _EntityResource_ contains. The next screenshot shows the resulting editor.
+At this point we are finished defining the editor for the _Entity_ (at least for the time being), and we can now define the editor for the _EntityResource_. Create a new empty editor for _EntityResource_ in the same way as explained for the _Entity_ above. This editor should only contain the list of entities, the _EntityResource_ contains. The next screenshot shows the resulting editor.
 
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityResourceEditor.png
