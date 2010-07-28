@@ -113,9 +113,10 @@ The editor for this _EntityType_ concept is simple, is only the reference:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityTypeEditor.png
 
-There is only one cell, selected by pressing the percent key in the code completion menu. However, since this is a reference to an existing element (another entity), you have to define which of the referenced entity's properties should be used to represent the reference to the entity. In the red-backgrounded cell, press control space and select the name property. This makes sure the target entity's name is used to represent the reference.
+There is only one cell, selected by pressing the percent key in the code completion menu. However, since this is a reference to an existing element (another entity), you have to define which of the referenced entity's properties should be used to represent the reference to the entity. In the red-backgrounded cell, press control space and select the _name_ property. This makes sure the target entity's name is used to represent the reference.
 
 This concludes the definition of the language, and we can go back to trying it out.
+Again remember to generate your language first via CTRL-F9. (last hint here)
 
 == Playing with the entities Language ==
 
