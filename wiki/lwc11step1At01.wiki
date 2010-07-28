@@ -27,13 +27,14 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-afte
 
 In MPS what is typically called a metaclass is called a language concept, or _concept_ for short. Because MPS is a projectional editor, languages are actually defined by first defining the structure of the language concepts. 
 
-Based on the task we are supposed to implement, it is obvious that we need a language concept called _Entity_. So let's create it. In the _structure_ part of your _entities_ language select New->concept from the context menu. Name your new concept _Entity_ and make sure it implements the _INamedConcept_ interface. This adds a _name_ property to our new concept. Using the predefined interface is better than just adding a string property _name_, because a couple of default MPS functionalities depend on the _INamedConcept_ interface. You should also define an alias for your concept, the alias is the text string that is used to instantiate a concept in the editor, we will illustrate this below. The next screenshot shows the result of this step.
+Based on the task we are supposed to implement, it is obvious that we need a language concept called _Entity_. So let's create it. In the _structure_ part of your _entities_ language select New->concept from the context menu. Name your new concept _Entity_ and make sure it implements the _INamedConcept_ interface. This adds a _name_ property to our new concept. Using the predefined interface _INamedConcept_ is better than just adding a string property _name_, because a couple of default MPS functionalities depend on the _INamedConcept_ interface. You should also define an _alias_ for your concept, the _alias_ is the text string that is used to instantiate a concept in the editor, we will illustrate this below. The next screenshot shows the result of this step.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-creatingTheEntityConcept.png
 
-In MPS, projects contrain languages and solutions. A solution is a container for non-language things. A solution and alanguage in turn consist of models. A model corresponds to a physical resource, basically an XML file. Each model contains any number of root notes, which are instances of concepts that half there _can Be Root_ property set to _true_. In our example, we want to make sure that a model can contain several entities, so we add an additional language concept that acts as a container for entities and is itself a rootable concept. We call this concept _EntityReource_. Please use the same approach as above to create this new concept.
+In MPS, projects contrain languages (icon L) and solutions (icon S). 
+A solution is a container for non-language things. A solution and a language in turn consist of models. A model corresponds to a physical resource, basically an XML file. Each model contains any number of root notes, which are instances of concepts that half there _instance can be root_ property set to _true_. In our example, we want to make sure that a model can contain several entities, so we add an additional language concept that acts as a container for entities and is itself a rootable concept. We call this concept _EntityResource_. Please use the same approach as above to create this new concept.
 
-As we just said, the EntityResource should contain any number of entities. To enable this, we must add a child relationship the entity resource. The following screenshot should be self explaining and shows the result. Notice how the _instance can be root_ property is set to _true_.
+As we just said, the _EntityResource_ should contain any number of entities. To enable this, we must add a child relationship the entity resource. The following screenshot should be self explaining and shows the result. Notice how the _instance can be root_ property is set to _true_.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-creatingTheEntityResourceConcept.png
 
@@ -61,7 +62,7 @@ Now enter two additional constants for the opening and closing curly brace. At t
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditor2.png
 
-At this point we are finished defining the editor for the entity (at least for the time being), and we can now define the editor for the resource. Create a new empty editor for EntityResource in the same way as explained for the entity above. This editor should only contain the list of entities, the entity resource contains. The next screenshot shows the resulting editor.
+At this point we are finished defining the editor for the entity (at least for the time being), and we can now define the editor for the resource. Create a new empty editor for _EntityResource_ in the same way as explained for the entity above. This editor should only contain the list of entities, the entity resource contains. The next screenshot shows the resulting editor.
 
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityResourceEditor.png
@@ -123,4 +124,3 @@ You should now be able to define models like the following:
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-playingWithTheLanguage.png
 
 When you press control-space when defining the type, you can select between the primitives, but you can also select any of the other entities. This is because there is a little bit of magic going on: whenever a concept has exactly one 1..1 reference, then MPS calls this a Smart Reference. In this case, when you press control space, the system doesn't propose to instantiate the concept (here: the _EntityType_). Instead it directly shows in the code completion menu all those elements that would be valid targets of the single 1..1 reference in the concept (here: all entities). When you select one, the Smart Reference object (here: _EntityType_) is transparently instantiated and the reference populated with the selected target.
-
