@@ -34,15 +34,15 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-crea
 In MPS, projects contrain languages (icon L) and solutions (icon S). 
 A solution is a container for non-language things. A solution and a language in turn consist of models. A model corresponds to a physical resource, basically an XML file. Each model contains any number of root notes, which are instances of concepts that half there _instance can be root_ property set to _true_. In our example, we want to make sure that a model can contain several entities, so we add an additional language concept that acts as a container for entities and is itself a rootable concept. We call this concept _EntityResource_. Please use the same approach as above to create this new concept.
 
-As we just said, the _EntityResource_ should contain any number of entities. To enable this, we must add a child relationship the entity resource. The following screenshot should be self explaining and shows the result. Notice how the _instance can be root_ property is set to _true_.
+As we just said, the _EntityResource_ should contain any number of entities. To enable this, we must add a child relationship the _Entity_ resource. The following screenshot should be self explaining and shows the result. Notice how the _instance can be root_ property is set to _true_.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-creatingTheEntityResourceConcept.png
 
-At this point we are finished with the definition of the structure of our first two concepts. To make them usable in the editor we have to define the syntax, or in MPS terminology, the editor. Let's start with the entity.
+At this point we are finished with the definition of the structure of our first two concepts. To make them usable in the editor we have to define the syntax, or in MPS terminology, the editor. Let's start with the editor for _Entity_.
 
 == Defining an Editor == 
 
-If you double-click on your Entity concept, the structure editor for Entity should open. You can then select editor tab. If you click into the blank editor, you can create a new concept editor. After you do this you should have an empty editor, into which you can add your projection rules. The result of adding the projection rules should look like the following (notice that our entities don't have attributes yet):
+If you double-click on your _Entity_ concept, the structure editor for _Entity_ should open. You can then select Editor tab. If you click into the blank editor, you can create a new concept editor. After you do this you should have an empty editor, into which you can add your projection rules. The result of adding the projection rules should look like the following (notice that our entities don't have attributes yet):
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditor1.png
 
@@ -56,13 +56,13 @@ Some explanations are in order. The
 
 syntax refers to so-called indent collections. These are collections that behave more or less like flowing text, I will explain details below. Within this collection refers have a keyword entity. Keywords are called constants in the MPS editor. So after selecting the indent collection from the code completion menu, you should then select _constant_ from the code completion menu. Once you have inserted the constant, you can specify the string value, "entity". 
 
-The next element in the collection is the name of the entity. Insert a new empty cell into the indent collection (by pressing enter or insert), and then press control-space and enter an opening curly brace so you can select from the available primitive properties; that name property. This means that the cell projects the name of the entity (remember you get the name property by inheriting from the _INamedConcpet_ interface.) 
+The next element in the collection is the _name_ of the entity. Insert a new empty cell into the indent collection (by pressing enter or insert), and then press control-space and enter an opening curly brace so you can select from the available primitive properties; that _name_ property. This means that the cell projects the _name_ of the _Entity_ (remember you get the name property by inheriting from the _INamedConcpet_ interface.) 
 
-Now enter two additional constants for the opening and closing curly brace. At this point all the cells in the indent collection are shown in one line. If you want to force line breaks, for example, in front of the closing curly brace, you have to select the respective cell property as shown in the following screenshot. You can't open the inspector window by pressing Alt-2 or by selecting Window->Tool Windows->Inspector from the menu (you will need the inspector all the time, so keep it open).
+Now enter two additional constants for the opening and closing curly brace. At this point all the cells in the indent collection are shown in one line. If you want to force line breaks, for example, in front of the closing curly brace, you have to select the respective cell property as shown in the following screenshot. You can open the inspector window by pressing Alt-2 or by selecting Window->Tool Windows->Inspector from the menu (you will need the inspector all the time, so keep it open).
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityEditor2.png
 
-At this point we are finished defining the editor for the entity (at least for the time being), and we can now define the editor for the resource. Create a new empty editor for _EntityResource_ in the same way as explained for the entity above. This editor should only contain the list of entities, the entity resource contains. The next screenshot shows the resulting editor.
+At this point we are finished defining the editor for the _Entity_ (at least for the time being), and we can now define the editor for the resource. Create a new empty editor for _EntityResource_ in the same way as explained for the _Entity_ above. This editor should only contain the list of entities, the _EntityResource_ contains. The next screenshot shows the resulting editor.
 
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityResourceEditor.png
@@ -71,13 +71,13 @@ The editor itself contains only one cell. It is a vertical child collection. So 
 
 == Defining a simple model ==
 
-This finishes the definition (at least the first iteration) of the language, and we can go to the previously created solution and create an example instance.
+This finishes the definition (at least the first iteration) of the language, and we can go to the previously created solution and create an example instance. Before you generate your sample model however make sure that you generate your language (via CTRL-F9). This generates, compiles and reloads the necessary java classes for your language automatically. MPS also indicates in the project tree whether a language (or parts thereof) need to be generated.
 
-So in the solution, use the context menu to create a new model. Its name does not matter. Selecting the context menu of this new model, you should be able to create an instance of _EntityResource_, because it is a rootable concept. This should look like the following:
+In the solution, use the context menu to create a new model. Its name does not matter. Selecting the context menu of this new model, you should be able to create an instance of _EntityResource_, because it is a rootable concept. This should look like the following:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-firstSolution.png
 
-The syntax is relatively boring, because we didn't define any fancy syntax for the entity resource, it simply contains a collection of entities. The symbol you see represents this empty collection. You put the cursor into this field, you can either press enter or type "entity" (remember the alias) to create a new entity. Notice how the syntax of the newly created entity resembles the editor we defined above. You can now go ahead and enter a name for the new entity, for example "Person". 
+The syntax is relatively boring, because we didn't define any fancy syntax for the _Entity Resource_, it simply contains a collection of entities. The symbol you see represents this empty collection. You put the cursor into this field, you can either press enter or type "entity" (remember the alias) to create a new entity. Notice how the syntax of the newly created entity resembles the editor we defined above. You can now go ahead and enter a name for the new entity, for example "Person". 
 
 Selecting the closing curly brace of the person entity, you can now press enter to add new entities. This completes the first iteration. We can now continue to add attributes for the entities.
 
