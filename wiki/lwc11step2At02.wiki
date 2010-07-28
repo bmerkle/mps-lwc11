@@ -22,6 +22,8 @@ Let us look at the implementation to make this clearer.
 
 The first step we have to perform is to create a generator (note that although these things are actually model transformations, the "container" that contains them is called a generator). Use the context menu on the entities language to run New->Generator to create one. The generator's name doesn't really matter, I usually call it main. The result should look something like this.
 
+TODO: screenshot not with "xy" but "entities" language...
+
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-newGenerator.png
 
 The important content of the generator at this point is the so-called mapping configuration. This is a configuration that determines which language concepts are transformed how. These mapping configurations have different kinds of rules. We will need two of these:
