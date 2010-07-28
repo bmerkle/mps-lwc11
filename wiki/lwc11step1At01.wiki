@@ -73,6 +73,10 @@ The editor itself contains only one cell. It is a vertical child collection. So 
 
 This finishes the definition (at least the first iteration) of the language, and we can go to the previously created solution and create an example instance. Before you generate your sample model however make sure that you generate your language (via CTRL-F9). This generates, compiles and reloads the necessary java classes for your language automatically. MPS also indicates in the project tree whether a language (or parts thereof) need to be generated.
 
+TODO: we have to add the language to the solution properties first. 
+Tab Dependencies->Used Languages.
+This seems not to be done automatically via the project creation ?
+
 In the solution, use the context menu to create a new model. Its name does not matter. Selecting the context menu of this new model, you should be able to create an instance of _EntityResource_, because it is a rootable concept. This should look like the following:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-firstSolution.png
