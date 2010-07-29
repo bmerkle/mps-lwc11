@@ -12,11 +12,20 @@ This tutorial expects that you have heard about MPS and how it works in general 
 
 = Detailed Documentation =
 
+== Prolog ==
+
+  * [http://code.google.com/p/mps-lwc11/wiki/DocuemntConventions Conventions] used in this tutorial
   * [http://code.google.com/p/mps-lwc11/wiki/SomeMPSBasics Basics] A couple of tipps and tricks for working with MPS. Recommended Reading!
+
+== Phase 0 ==
+
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step1At01 Task 0.1] Build a simple data definition language to define entities with properties.
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step2At02 Task 0.2] Code generation to GPL such as Java, C#, C++ or XML
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step3At03 Task 0.3] Simple constraint checks such as name-uniqueness
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step4At04 Task 0.4] Show how to break down a (large) model into several parts, while still cross-referencing between the parts.
+
+== Phase 1 ==
+
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step5At11 Task 1.1] Show the integration of several languages.
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step6At15 Task 1.5] Integrating manually written code (again in Java, C# or C++)
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step7At12 Task 1.2] Demonstrate how to implement runtime type systems.
@@ -25,7 +34,13 @@ This tutorial expects that you have heard about MPS and how it works in general 
   * Task 1.5 -- see above, we've moved it ahead
   * Task 1.6 -- not implemented since it would be exactly the same as 1.3
 
+== Phase 2 ==
 
+tbd
+
+== Phase 3 ==
+
+  * 
 
 
 
