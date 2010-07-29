@@ -50,6 +50,8 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step4At04-newR
 
 You can now generate your language, and generate your solution as well, by selecting Generate Solution from its context menu. By the way, if you want to take a look at the generated code you can do this from within MPS. In the project explorer, you change the combo box at the top to File System and then navigate to the generated code of the solution, as shown below. The screenshot shows the TheThirdEntity generated correctly.
 
+Note that you first have to generate the entities model and then, after that, the moreEntities model. Otherwise the stub mechanism will not work (at this time).
+
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step4At04-fileSystem.png
 
 There is one more thing worth introducing here. The solution above is dangerous because we have now implemented the "algorithm" to derive the name of the generated Java class from the Entity twice: in the property macro for the class name in the map_Entity template, as well as in the function we just wrote. Accidentally changing it in one place only will result in a broken generator. 
