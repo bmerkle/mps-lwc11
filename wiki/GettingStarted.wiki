@@ -21,6 +21,9 @@ This tutorial expects that you have heard about MPS and how it works in general 
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step6At15 Task 1.5] Integrating manually written code (again in Java, C# or C++)
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step7At12 Task 1.2] Demonstrate how to implement runtime type systems.
   * [http://code.google.com/p/mps-lwc11/wiki/lwc11step8At13 Task 1.3] Show how to do a model-to-model transformation.
+  * [http://code.google.com/p/mps-lwc11/wiki/lwc11step9At14 Task 1.4] Some kind of visibility/namespaces/scoping for references. 
+
+
 
 
 
