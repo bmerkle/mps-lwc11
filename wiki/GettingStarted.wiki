@@ -14,7 +14,7 @@ This tutorial expects that you have heard about MPS and how it works in general 
 
 == Prolog ==
 
-  * [http://code.google.com/p/mps-lwc11/wiki/DocuemntConventions Conventions] used in this tutorial
+  * [http://code.google.com/p/mps-lwc11/wiki/DocumentConventions Conventions] used in this tutorial
   * [http://code.google.com/p/mps-lwc11/wiki/SomeMPSBasics Basics] A couple of tipps and tricks for working with MPS. Recommended Reading!
 
 == Phase 0 ==
