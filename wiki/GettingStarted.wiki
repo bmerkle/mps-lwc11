@@ -16,6 +16,7 @@ This tutorial expects that you have heard about MPS and how it works in general 
 
   * [http://code.google.com/p/mps-lwc11/wiki/DocumentConventions Conventions] used in this tutorial
   * [http://code.google.com/p/mps-lwc11/wiki/SomeMPSBasics Basics] A couple of tipps and tricks for working with MPS. Recommended Reading!
+  * [http://code.google.com/p/mps-lwc11/wiki/Tools Tools] used in this tutorial
 
 == Phase 0 ==
 
