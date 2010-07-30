@@ -41,7 +41,8 @@ Let's now create a root mapping rule (by pressing enter in the respective slot).
 TODO:
 - paragraph above is not sufficiently explained, 
 - explain class template creation better (not obvious here... missing content)
-- explain mapping label
+- explain mapping label, this is only used later for resolving references.
+- mapping label should not be in the screen shot here...
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-mappingRule.png
 
@@ -145,6 +146,8 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-atta
 
 We can now go back to the function in the reference macro (in the inline template for _EntityType_, in the mapping configuration). The function uses utility to get the output thing created from the respective input, using the label.
 
+TODO: function to use is: "get output by label and input"...
+
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-referenceMacroFunction.png
 
 At this point we should be ready to test our new stage of the language. Press Ctrl-F9 to regenerate the language, go to the example model and select Generate Text. This is how it should look like:
@@ -182,6 +185,10 @@ Except for the getters and setters we're pretty much done. These are, however, r
   * we then add a LOOP macro around the whole setter, iterating over all attributes of our input entity
   * then we add a property macro to the setter's name to calculate the setBla method name
   * and we add a COPY_SRC macro around the type of the argument, using the existing reduction rule for the attribute's type.
+
+To capitalize the attribute name in setBla we use the utility method "set" + NameUtil.captalize(node.name). To use NameUtil you must import jetbrains.mps.util@java_stub into the generator 
+
+TODO bm: change the code from get" + node.name.substring(0, 1).toUpperCase() + node.name.substring(1); to use NameUtil...
 
 This is how it looks:
 
