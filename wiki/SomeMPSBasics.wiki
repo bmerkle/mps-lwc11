@@ -25,8 +25,8 @@ Another very useful "trick" is the Go Back functionality, that incrementally goe
 To import a language or stub into a Language, Model, Generator or Solution just press ALT-Enter and go to the dependencies tab. There you can add e.g. j.m.b immediately.
 
 A *very* usefull shortcut is to import the used part automatically as follows (two ways):
-* with Ctrl-M import the model via its name (e.g. j.m.b)
-* with Ctrl-R import the model via a arbitrary element of that package (e.g. String)
+  * with Ctrl-M import the model via its name (e.g. j.m.b)
+  * with Ctrl-R import the model via a arbitrary element of that package (e.g. String)
 
 = Checking =
 
@@ -34,7 +34,12 @@ If something does not work, you can always use Check Model or Check Language fro
 
 = Debugging =
 
-As of now, there is no real debugger that can be used the "meta programs", except the generation trace (see below). So you have to revert to "printf-debugging". In any base language program you can use the shortcut _sout_ to expand into a System.out.println() statement. To see the output, make sure you start MPS with java.exe, not javaw.exe. You can change this in the mps.bat file that starts MPS.
+As of now, there is no real debugger that can be used the "meta programs", except the generation trace (see below). So you have to revert to "printf-debugging". 
+In any base language program you can use the shortcut _sout_ to expand into a System.out.println() statement. 
+To see the output start the java vm with console output.
+  * on Windows make sure you start MPS with java.exe, not javaw.exe. You can change this in the mps.bat file that starts MPS.
+  * on MAC ?
+  * on Unix ?
 
 = Generation Trace =
 
