@@ -92,4 +92,4 @@ message should be associated with. Alternatively, there is also a warning constr
 After rebuilding the language, you can try to add two attributes with the same name. If you do, these two are both
 underlined red, and you also get the error messages reported in the model checker.
 
-Also a tip: with CTRL-ALT-LeftClick on a error message you can go back to the rule which fired/triggered this error message. Also see the SomeMPSBasics document for further tricks.
+Also a tip: with CTRL-ALT-LeftClick on a error message you can go back to the rule which fired/triggered this error message. Also see the [http://code.google.com/p/mps-lwc11/wiki/SomeMPSBasics Basics] document for further tricks.
