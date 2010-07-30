@@ -25,7 +25,7 @@ MPS allows quite sophisticated forms of language composition. The basic requirem
 However, I have decided to create a somewhat tighter integration, in the sense that it is possible to also put the instances of entities into one of these EntityResources,
 right alongside Entities. We will still develop a separate language, but it will be a  sub-language of the entities language. Here is the kind of code you will be able to write:
 
-lwc11step5At11-exampleCode.png
+https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-exampleCode.png
 
 == Adapting the existing entities language ==
 
@@ -142,8 +142,6 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-intw
   * and then in the Create Child Node section, we create a new IntConstantExpression and set the value   as a number.
   
 We can now simply enter the actual number, and the system automatically creates the necessary IntInstance.
-
-
 
 
 
