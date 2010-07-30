@@ -22,8 +22,7 @@ Let us look at the implementation to make this clearer.
 
 The first step we have to perform is to create a generator (note that although these things are actually model transformations, the "container" that contains them is called a generator). Use the context menu on the entities language to run New->Generator to create one. The generator's name doesn't really matter, I usually call it main. The result should look something like this.
 
-TODO: screenshot not with "xy" but "entities" language...
-TODO: does not work currently because Entity are non-roots. Only EntityResource are roots...
+TODO mv: screenshot not with "xy" but "entities" language...
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-newGenerator.png
 
@@ -38,17 +37,18 @@ As the heading suggests, we want to create a Java class. Since we don't simply g
 
 Let's now create a root mapping rule (by pressing enter in the respective slot). For the concept, choose _Entity_. You now have to specify the template that performs the transformation. In the respective slot, press alt-enter and select "New Root Template". From the popup menu that shows up then, select _class_. The result should look like this:
 
-TODO:
-- paragraph above is not sufficiently explained, 
-- explain class template creation better (not obvious here... missing content)
-- explain mapping label, this is only used later for resolving references.
+TODO mv:
 - mapping label should not be in the screen shot here...
+- screen shot should also contain Abandon Roots property here...
+
+TODO bm: 
+- maybe explain Abandon Roots already here (would make sense IMO)
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-mappingRule.png
 
 You can now ctrl-click onto the template name in the mapping configuration to open the newly created template. It should look somethíng like this:
 
-TODO:
+TODO mv:
 wrong screenshot there should be no mapping labels. They are introduced later.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template0.png
@@ -111,7 +111,7 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-temp
 
 COPY_SRC macros invoke existing reduction rules (see below) to in-place translate the node  that is returned in the macro function. Because our function returns the type of the attributes, reduction rules that are defined for the _Type_ subtypes are executed automatically. The next step, thus, has to be to define these reduction rules.
 
-TODO: explain that all of these operations are available via special intentions so you do not have to write the code. For simple cases there is often a intention offered.
+TODO bm: explain that all of these operations are available via special intentions so you do not have to write the code. For simple cases there is often a intention offered.
 
 We go back to the mapping configuration and press enter in the reduction rules section. This gives us a new, empty reduction rule. Starting with a reduction rule for strings, we select _StringType_ as the applicable concept in the reduction rule (make sure you actually select the one from the entities language). In the consequences slot, we don't create a new template as we did before; rather, we press ctrl-space and select "inline template", which means that the thing we reduce to is directly specified in the mapping configuration. This is useful for small, simple templates. In this case, we simply want to generate a Java string type. So we simply select _StringType_, this time the one from j.m.baseLanguage. That's all! We do the same for booleans and ints.
 
@@ -146,7 +146,7 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-atta
 
 We can now go back to the function in the reference macro (in the inline template for _EntityType_, in the mapping configuration). The function uses utility to get the output thing created from the respective input, using the label.
 
-TODO: function to use is: "get output by label and input"...
+TODO bm: function to use is: "get output by label and input"...
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-referenceMacroFunction.png
 
