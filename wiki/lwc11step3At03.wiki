@@ -21,7 +21,7 @@ Note that all of these constraints are not "just" constraints in the sense that 
 
 *Reference Constraints* define which nodes are valid targets for a reference (a pointer). The constraint returns the set of valid target nodes. These kinds of constraints are otherwise known as scopes and are demonstrated in a later step of this tutorial.
 
-*Property Constraints* are invoked when working with properties. Remember, properties, unlike child relationships, are primitives (typed int, string or boolean). As part of the property constraint you can define a setter, a getter and a validation check. 
+*Property Constraints* are invoked when working with properties. Remember, properties, unlike child relationships, are primitives (int, string or boolean). As part of the property constraint you can define a setter, a getter and a validation check. 
 
 Let us implement a simple check that makes sure that properties start with a capital letter. Open the Entity concept and select the constraints tab. It is probably empty, so you should click into the white area to create a new one. You can then create a new property constraint by pressing enter in the respective slot. This is how the result will look:
 
