@@ -60,6 +60,10 @@ Templates in MPS work the following way: you first write valid example code. The
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template1-propertyMacro.png
 
+
+Before we can give generator a first spin, we have to do one more thing. Root Mapping rules are intended to map root nodes. However, our entities are not roots - they are inside EntityResources. But we still want to generate a file per Entity. Here is how we do it: we add the EntityResource in the Abandon Roots section in the mapping configuration. This means the EntityResources are discarded, and their contents are fed into the mapping rules.
+
+
 At this point we have working, albeit incomplete, template. To test it, we first have to regenerate the language. Press Ctrl-F9 to rebuild (or use the language context menu and select Rebuild Language).
 
 You can then select your one and only model in the example solution and open the context menu. Select the "Generate Text" option. This outputs the text, basically for debugging purposes, into a window in MPS. This is how it should look like:
