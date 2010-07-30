@@ -32,7 +32,7 @@ To enable a cross-model reference, we have to make sure that the actual referenc
 	model.nodesIncludingImported(scope , Entity).where( it => ... filter somehow ... );
 }}}
 
-The next three steps are a workaround for a limitatation in the current MPS 1.5 version and are concerned with the code generator. In later versions of MPS all of the following stuff should not be necessary. The fact that this problem exists in the current version of MPS shows that cross-model references aren't actually that common, because you can put a lot of stuff into a single model - the logical structure is independent!
+The next three steps are a workaround for a limitation in the current MPS 1.5 version and are concerned with the code generator. In later versions of MPS all of the following stuff should not be necessary. The fact that this problem exists in the current version of MPS shows that cross-model references aren't actually that common, because you can put a lot of stuff into a single model - the logical structure is independent!
 
 The first thing you have to do is start up MPS with the -Dmps.internal=true Java VM option. You can enable this option by putting the -Dmps.internal=true line at the end of the mps.exe.vmoptions file in MPS' bin directory.
 
@@ -58,8 +58,8 @@ There is one more thing worth introducing here. The solution above is dangerous 
 
 It would be better to encapsulate this into a helper function. You can either put it into a static method in a helper class that you put into the generator (which is the preferred solution in theory), but the easiest solution is simply to put into to the Behaviour aspect of the Entity. Since we hadn't looked at behaviour yet, this is a good reason to do so.
 
-Open the definition of the _Entity_ concept and in the bottom-side tabs click on Behavior. None exists, so create one by clicking into the white area. Behaviour for a concept is basically just a colleciton of methods as wel as a constructur. In the concept methods slot press enter and create a string method called classname. Implement it as shown in the following screenshot.
+Open the definition of the _Entity_ concept and in the bottom-side tabs click on Behavior. None exists, so create one by clicking into the white area. Behaviour for a concept is basically just a collection of methods as well as a constructor. In the concept methods slot press enter and create a string method called classname. Implement it as shown in the following screenshot.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step4At04-behaviour.png
 
-We can now call this method from the two places metioned above, making the overall design much more resilient. Behaviours can be called just like any property.
+We can now call this method from the two places mentioned above, making the overall design much more resilient. Behaviours can be called just like any property.
