@@ -63,3 +63,4 @@ Open the definition of the _Entity_ concept and in the bottom-side tabs click on
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step4At04-behaviour.png
 
 We can now call this method from the two places mentioned above, making the overall design much more resilient. Behaviours can be called just like any property.
+Note that MPS implicitly inserts the return statement :-) (so it is more than just Java)
