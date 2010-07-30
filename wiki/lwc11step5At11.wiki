@@ -20,10 +20,10 @@ http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-5b-at11.zip
 
 
 
-MPS allows quite sophisticated forms of langugae composition. The basic requirement for this task is to build a completely separate language that refereneces the Entities and the attributes from the entities language.
+MPS allows quite sophisticated forms of language composition. The basic requirement for this task is to build a completely separate language that references the Entities and the attributes from the entities language.
 
 However, I have decided to create a somewhat tighter integration, in the sense that it is possible to also put the instances of entities into one of these EntityResources,
-right alongside Entities. We will still develop a separate language, but it will be a  sublanguage of the entities language. Here is the kind of code you will be able to write:
+right alongside Entities. We will still develop a separate language, but it will be a  sub-language of the entities language. Here is the kind of code you will be able to write:
 
 lwc11step5At11-exampleCode.png
 
@@ -41,10 +41,10 @@ We are now creating a new language called instances. The documentation about thi
 
 So we create a new language called instances in our project. It extends the entities language. In it, we'll define the following concepts (take a look at the example for details).
 
-  * EntityInstance represents an instance of an Entity (see p in example code above). It implements the IResourceContent, to make sure it has a name and can be embedded inside an  EntityResource. It also has a 1..1 reference called entity of type Entity. This is the pointer to the Entity instance an EntityInstance represents. Finally, the EntityInstance has a 0..n child called values; the type of that referénece is EntityAttributeValue (see next para). The editor definition should be understandable from looking at the code. We also give it an alias called "instance".
+  * EntityInstance represents an instance of an Entity (see p in example code above). It implements the IResourceContent, to make sure it has a name and can be embedded inside an  EntityResource. It also has a 1..1 reference called entity of type Entity. This is the pointer to the Entity instance an EntityInstance represents. Finally, the EntityInstance has a 0..n child called values; the type of that reference is EntityAttributeValue (see next para). The editor definition should be understandable from looking at the code. We also give it an alias called "instance".
   * An EntityAttributeValue is the concept behind the name=100 or firstName="markus" things. It assigns a value to the an attribute of the Entity to which the current EntityInstance points. It has a 1..1 reference to the EntityAttribute called attribute. And it has a 1..1 child called expr of type EAVExpression (see below). The editor definition should be understandable from looking at the code.
   * An EAVExpression (EntityAttributeValueExpression) is an abstract concept that represents the things that can be on the right side of the equals sign in one of these EntityAttributeValues. Since this concept is abstract it (a) has no editor and (b) requires subconcepts.
-  * IntConstantExpression is a subconconcept of EAVExpression and has a simple int property called value. The editor has one cell that projects this value.
+  * IntConstantExpression is a subconcept of EAVExpression and has a simple int property called value. The editor has one cell that projects this value.
   * StringConstantExpression is a subconconcept of EAVExpression and has a simple string property called value. The editor has three cells, two constants with a quotation mark, and one cell in between that projects the value property.
   
 Now you can regenerate the language and go back to your existing example code. Add the instances language to the used languages of the solution of model, and open one of the 
@@ -65,7 +65,7 @@ ctrl-space to directly (!) select an attribute for which you want to define a va
 
 == Defining the Scope for the attribute reference ==
 
-A scope defines which nodes are valids targets for a reference. By default, all nodes of the  target type are valid. In most languages, this is too broad. For example, in our case here we need to make sure that only the attributes of the Entity to which the instance for which we're defining an attribute value are shown.
+A scope defines which nodes are valid targets for a reference. By default, all nodes of the  target type are valid. In most languages, this is too broad. For example, in our case here we need to make sure that only the attributes of the Entity to which the instance for which we're defining an attribute value are shown.
 
 To define this scope, open the EntityAttributeValue and select the Constraints tab. You might have to create a new one by clicking into the editor. Since we want to define a scope for a reference press enter in the Referent Constraint slot. In the red slot marked as <choose reference> select attribute (the only choice). Then enter the following code into the body:
 
@@ -80,7 +80,7 @@ Rebuilding the language and going back to the example from before, the code comp
 
 == References to other Instances ==
 
-Currently we cannot yet set a value for an attribute whose type is another Entity. We can only set ints and strings. Solving this should clear by now: we create an InstanceRefExpression
+Currently we cannot yet set a value for an attribute whose type is another Entity. We can only set int and string values. Solving this should clear by now: we create an InstanceRefExpression
 as subconcept of EAVExpression, which itself references an EntityInstance. That's it (you might want to define a scope).
 
 
@@ -120,7 +120,7 @@ So far so good. But if we do so, the system creates an EntityType, which we can'
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-wrapper5.png
 
-Go back to the exampe model and press ctrl-space for example after an Entity (eg after the
+Go back to the example model and press ctrl-space for example after an Entity (eg after the
 Person). You can directly choose from any of the existing entities; selecting one creates an instance, and because of the previous thing we did, we directly get the attribute value defaults.
 
 Nice, isn't it??
@@ -142,8 +142,6 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-intw
   * and then in the Create Child Node section, we create a new IntConstantExpression and set the value   as a number.
   
 We can now simply enter the actual number, and the system automatically creates the necessary IntInstance.
-
-
 
 
 
