@@ -20,6 +20,14 @@ Pressing Ctrl-S on any element opens its concept.
 
 Another very useful "trick" is the Go Back functionality, that incrementally goes back to previous edit locations. I have used the Settings to assign the Alt-Backspace keyboard shortcut just like in current browsers. Very useful.
 
+= Dependencies =
+
+To import a language or stub into a Language, Model, Generator or Solution just press ALT-Enter and go to the dependencies tab. There you can add e.g. j.m.b immediately.
+
+A *very* usefull shortcut is to import the used part automatically as follows (two ways):
+* with Ctrl-M import the model via its name (e.g. j.m.b)
+* with Ctrl-R import the model via a arbitrary element of that package (e.g. String)
+
 = Checking =
 
 If something does not work, you can always use Check Model or Check Language from the respective context menus. This will give you a list of all the errors in your code. 
