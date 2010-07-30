@@ -45,9 +45,9 @@ To see the output start the java vm with console output.
 
 You use error or warnings to flag constraint or model violations in MPS.
 As an example to check name uniqueness with a "non type system rule" in the typesystem (no joke :-), then you usually output some error or warnings. To trace back to the message to the origin there are two usefull shortcuts:
-  * with <Ctrl-Alt-LeftClick> on the message and then click on "Go To Rule"
-  * select the complete node which caused the error (e.g. <Ctrl-W> <Ctrl-Shift-W>) the context menu "Type System" -> "Go To Rule Which Caused Error" 
-  * instead of the context menu also <Ctrl-Alt-R> is possible
+  * with Ctrl-Alt-LeftClick on the message and then click on "Go To Rule"
+  * select the complete node which caused the error (e.g. Ctrl-W Ctrl-Shift-W) the context menu "Type System" -> "Go To Rule Which Caused Error" 
+  * instead of the context menu also Ctrl-Alt-R is possible
 
 = Generation Trace =
 
