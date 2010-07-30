@@ -71,6 +71,8 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniq
 
 Now we have to implement the actual check. 
 
+TODO mv: names of attr do not match in lwc11step3At03-uniqueNames2.png and lwc11step3At03-uniqueNames3.png (should be attribute)
+
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames3.png
 
 Let's look at the code in detail:
@@ -89,3 +91,5 @@ message should be associated with. Alternatively, there is also a warning constr
 
 After rebuilding the language, you can try to add two attributes with the same name. If you do, these two are both
 underlined red, and you also get the error messages reported in the model checker.
+
+Also a tip: with CTRL-ALT-LeftClick on a error message you can go back to the rule which fired/triggered this error message. Also see the SomeMPSBasics document for further tricks.
