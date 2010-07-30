@@ -23,6 +23,7 @@ Let us look at the implementation to make this clearer.
 The first step we have to perform is to create a generator (note that although these things are actually model transformations, the "container" that contains them is called a generator). Use the context menu on the entities language to run New->Generator to create one. The generator's name doesn't really matter, I usually call it main. The result should look something like this.
 
 TODO: screenshot not with "xy" but "entities" language...
+TODO: does not work currently because Entity are non-roots. Only EntityResource are roots...
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-newGenerator.png
 
