@@ -106,6 +106,8 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-temp
 
 COPY_SRC macros invoke existing reduction rules (see below) to in-place translate the node  that is returned in the macro function. Because our function returns the type of the attributes, reduction rules that are defined for the _Type_ subtypes are executed automatically. The next step, thus, has to be to define these reduction rules.
 
+TODO: explain that all of these operations are available via special intentions so you do not have to write the code. For simple cases there is often a intention offered.
+
 We go back to the mapping configuration and press enter in the reduction rules section. This gives us a new, empty reduction rule. Starting with a reduction rule for strings, we select _StringType_ as the applicable concept in the reduction rule (make sure you actually select the one from the entities language). In the consequences slot, we don't create a new template as we did before; rather, we press ctrl-space and select "inline template", which means that the thing we reduce to is directly specified in the mapping configuration. This is useful for small, simple templates. In this case, we simply want to generate a Java string type. So we simply select _StringType_, this time the one from j.m.baseLanguage. That's all! We do the same for booleans and ints.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template2-typeReduction.png
