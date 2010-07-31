@@ -131,3 +131,21 @@ You should now be able to define models like the following:
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-playingWithTheLanguage.png
 
 When you press control-space when defining the type, you can select between the primitives, but you can also select any of the other entities. This is because there is a little bit of magic going on: whenever a concept has exactly one 1..1 reference, then MPS calls this a Smart Reference. In this case, when you press control space, the system doesn't propose to instantiate the concept (here: the _EntityType_). Instead it directly shows in the code completion menu all those elements that would be valid targets of the single 1..1 reference in the concept (here: all entities). When you select one, the Smart Reference object (here: _EntityType_) is transparently instantiated and the reference populated with the selected target.
+
+== Editor Customizations == 
+
+In MPS it is also possible to further customize an editor, e.g you can offer usefull defaults for developers. This is done in the following section. For our _EntityAttribute_ we want the default type to be _string_ by default. To implement this, go to the _EntityEditor_ select the _attributes_ ReferenceNodeList and go into the Inspector.
+In the "Ref.node list cell" table under "list element:" select "element factory" and enter the following code:
+
+TODO mv: add screenshot of EntityEditor and Inspector values 
+
+(scope, node)->node< > { 
+  node<EntityAttribute> n = new node<EntityAttribute>(); 
+  n.type = <string>; 
+  n.name.set(null); 
+  n; 
+}
+
+This now sets the EntityAttributes type to string by default, as can seen in the code an in the following screenshot.
+
+TODO mv: add screenshot of solution (maybe old and new version)
