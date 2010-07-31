@@ -65,7 +65,7 @@ ctrl-space to directly (!) select an attribute for which you want to define a va
 
 == Defining the Scope for the attribute reference ==
 
-A scope defines which nodes are valid targets for a reference. By default, all nodes of the  target type are valid. In most languages, this is too broad. For example, in our case here we need to make sure that only the attributes of the Entity to which the instance for which we're defining an attribute value are shown.
+A scope defines which nodes are valid targets for a reference. By default, all nodes of the  target type are valid. In most languages, this is too broad. For example, in our case here we need to make sure that only the attributes of the corresponding type of the Entity of the instance are shown.
 
 To define this scope, open the EntityAttributeValue and select the Constraints tab. You might have to create a new one by clicking into the editor. Since we want to define a scope for a reference press enter in the Referent Constraint slot. In the red slot marked as <choose reference> select attribute (the only choice). Then enter the following code into the body:
 
@@ -142,8 +142,6 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-intw
   * and then in the Create Child Node section, we create a new IntConstantExpression and set the value   as a number.
   
 We can now simply enter the actual number, and the system automatically creates the necessary IntInstance.
-
-
 
 
 
