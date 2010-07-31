@@ -4,7 +4,18 @@
     <modelRoot path="${language_descriptor}/languageModels" namespacePrefix="entityRelationship" />
   </models>
   <accessoryModels />
-  <generators />
+  <generators>
+    <generator name="entity2er" generatorUID="entityRelationship#9128626556287054463" uuid="c25493f1-5412-4b92-935e-2efdc2fc2909">
+      <models>
+        <modelRoot path="${language_descriptor}/generator/template" namespacePrefix="entityRelationship.generator.template" />
+      </models>
+      <external-templates />
+      <usedDevKits>
+        <usedDevKit>2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)</usedDevKit>
+      </usedDevKits>
+      <mapping-priorities />
+    </generator>
+  </generators>
   <sourcePath />
   <usedDevKits>
     <usedDevKit>2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)</usedDevKit>

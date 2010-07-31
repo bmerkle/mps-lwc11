@@ -12,6 +12,7 @@
   <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902db(jetbrains.mps.baseLanguage.blTypes.constraints)" version="0" />
   <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="3" />
   <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902c1(jetbrains.mps.baseLanguage.constraints)" version="83" />
+  <language-engaged-on-generation namespace="169ff556-e96e-409d-853a-17e6e2827514(entityRelationship)" />
   <maxImportIndex value="0" />
   <node type="entities.structure.EntityResource:0" id="7853931227643443171">
     <property name="name:0" value="aPerson" />
