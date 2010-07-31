@@ -285,12 +285,13 @@
   <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902ae(jetbrains.mps.lang.typesystem.constraints)" version="17" />
   <languageAspect modelUID="r:993fdace-bcf8-46d0-b138-676907585745(entities.generator.template.main@generator)" version="0" />
   <devkit namespace="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
-  <maxImportIndex value="5" />
+  <maxImportIndex value="6" />
   <import index="1" modelUID="r:fbcd9867-33ac-4cca-b510-29a3a4ed591f(entities.structure)" version="0" />
   <import index="2" modelUID="f:java_stub#java.lang(java.lang@java_stub)" version="-1" />
   <import index="3" modelUID="r:363dba88-af2f-461a-8325-df3b88a50443(entities.behavior)" version="-1" />
   <import index="4" modelUID="r:5acdc6c9-25f8-4578-95a7-3d37e74dd6e6(entities.generator.template.utils)" version="-1" />
   <import index="5" modelUID="f:java_stub#java.io(java.io@java_stub)" version="-1" />
+  <import index="6" modelUID="f:java_stub#jetbrains.mps.util(jetbrains.mps.util@java_stub)" version="-1" />
   <visible index="2" modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
   <visible index="3" modelUID="r:c8f09818-27d0-4e31-9cdf-dedd92fee7ef(jetbrains.mps.baseLanguage.closures.util)" />
   <node type="jetbrains.mps.lang.generator.structure.MappingConfiguration:2" id="7853931227643479891">
@@ -464,47 +465,19 @@
         <node role="propertyValueFunction:2" type="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue:2" id="7853931227643483714">
           <node role="body:2" type="jetbrains.mps.baseLanguage.structure.StatementList:3" id="7853931227643483715">
             <node role="statement:3" type="jetbrains.mps.baseLanguage.structure.ExpressionStatement:3" id="7853931227643483716">
-              <node role="expression:3" type="jetbrains.mps.baseLanguage.structure.PlusExpression:3" id="7853931227643483800">
-                <node role="rightExpression:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483816">
-                  <node role="operand:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483806">
-                    <node role="operand:3" type="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode:2" id="7853931227643483803" />
-                    <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SPropertyAccess:16" id="7853931227643483814">
+              <node role="expression:3" type="jetbrains.mps.baseLanguage.structure.PlusExpression:3" id="9064351649708315017">
+                <node role="rightExpression:3" type="jetbrains.mps.baseLanguage.structure.StaticMethodCall:3" id="9064351649708315021">
+                  <link role="baseMethodDeclaration:3" targetNodeId="6.~NameUtil.capitalize(java.lang.String):java.lang.String" resolveInfo="capitalize" />
+                  <link role="classConcept:3" targetNodeId="6.~NameUtil" resolveInfo="NameUtil" />
+                  <node role="actualArgument:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="9064351649708315025">
+                    <node role="operand:3" type="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode:2" id="9064351649708315022" />
+                    <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SPropertyAccess:16" id="9064351649708315031">
                       <link role="property:16" targetNodeId="4v.1169194664001:0" resolveInfo="name" />
                     </node>
                   </node>
-                  <node role="operation:3" type="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation:3" id="7853931227643483822">
-                    <link role="baseMethodDeclaration:3" targetNodeId="2.~String.substring(int):java.lang.String" resolveInfo="substring" />
-                    <node role="actualArgument:3" type="jetbrains.mps.baseLanguage.structure.IntegerConstant:3" id="7853931227643483823">
-                      <property name="value:3" value="1" />
-                    </node>
-                  </node>
                 </node>
-                <node role="leftExpression:3" type="jetbrains.mps.baseLanguage.structure.PlusExpression:3" id="7853931227643483748">
-                  <node role="leftExpression:3" type="jetbrains.mps.baseLanguage.structure.StringLiteral:3" id="7853931227643483728">
-                    <property name="value:3" value="set" />
-                  </node>
-                  <node role="rightExpression:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483792">
-                    <node role="operand:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483765">
-                      <node role="operand:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483754">
-                        <node role="operand:3" type="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode:2" id="7853931227643483751" />
-                        <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SPropertyAccess:16" id="7853931227643483761">
-                          <link role="property:16" targetNodeId="4v.1169194664001:0" resolveInfo="name" />
-                        </node>
-                      </node>
-                      <node role="operation:3" type="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation:3" id="7853931227643483781">
-                        <link role="baseMethodDeclaration:3" targetNodeId="2.~String.substring(int,int):java.lang.String" resolveInfo="substring" />
-                        <node role="actualArgument:3" type="jetbrains.mps.baseLanguage.structure.IntegerConstant:3" id="7853931227643483782">
-                          <property name="value:3" value="0" />
-                        </node>
-                        <node role="actualArgument:3" type="jetbrains.mps.baseLanguage.structure.IntegerConstant:3" id="7853931227643483784">
-                          <property name="value:3" value="1" />
-                        </node>
-                      </node>
-                    </node>
-                    <node role="operation:3" type="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation:3" id="7853931227643483799">
-                      <link role="baseMethodDeclaration:3" targetNodeId="2.~String.toUpperCase():java.lang.String" resolveInfo="toUpperCase" />
-                    </node>
-                  </node>
+                <node role="leftExpression:3" type="jetbrains.mps.baseLanguage.structure.StringLiteral:3" id="9064351649708315016">
+                  <property name="value:3" value="set" />
                 </node>
               </node>
             </node>
@@ -589,47 +562,19 @@
         <node role="propertyValueFunction:2" type="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue:2" id="7853931227643483888">
           <node role="body:2" type="jetbrains.mps.baseLanguage.structure.StatementList:3" id="7853931227643483889">
             <node role="statement:3" type="jetbrains.mps.baseLanguage.structure.ExpressionStatement:3" id="7853931227643483890">
-              <node role="expression:3" type="jetbrains.mps.baseLanguage.structure.PlusExpression:3" id="7853931227643483891">
-                <node role="rightExpression:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483892">
-                  <node role="operand:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483893">
-                    <node role="operand:3" type="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode:2" id="7853931227643483894" />
-                    <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SPropertyAccess:16" id="7853931227643483895">
+              <node role="expression:3" type="jetbrains.mps.baseLanguage.structure.PlusExpression:3" id="9064351649708315035">
+                <node role="rightExpression:3" type="jetbrains.mps.baseLanguage.structure.StaticMethodCall:3" id="9064351649708315039">
+                  <link role="baseMethodDeclaration:3" targetNodeId="6.~NameUtil.capitalize(java.lang.String):java.lang.String" resolveInfo="capitalize" />
+                  <link role="classConcept:3" targetNodeId="6.~NameUtil" resolveInfo="NameUtil" />
+                  <node role="actualArgument:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="9064351649708315043">
+                    <node role="operand:3" type="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode:2" id="9064351649708315040" />
+                    <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SPropertyAccess:16" id="9064351649708315049">
                       <link role="property:16" targetNodeId="4v.1169194664001:0" resolveInfo="name" />
                     </node>
                   </node>
-                  <node role="operation:3" type="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation:3" id="7853931227643483896">
-                    <link role="baseMethodDeclaration:3" targetNodeId="2.~String.substring(int):java.lang.String" resolveInfo="substring" />
-                    <node role="actualArgument:3" type="jetbrains.mps.baseLanguage.structure.IntegerConstant:3" id="7853931227643483897">
-                      <property name="value:3" value="1" />
-                    </node>
-                  </node>
                 </node>
-                <node role="leftExpression:3" type="jetbrains.mps.baseLanguage.structure.PlusExpression:3" id="7853931227643483898">
-                  <node role="leftExpression:3" type="jetbrains.mps.baseLanguage.structure.StringLiteral:3" id="7853931227643483899">
-                    <property name="value:3" value="get" />
-                  </node>
-                  <node role="rightExpression:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483900">
-                    <node role="operand:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483901">
-                      <node role="operand:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="7853931227643483902">
-                        <node role="operand:3" type="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode:2" id="7853931227643483903" />
-                        <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SPropertyAccess:16" id="7853931227643483904">
-                          <link role="property:16" targetNodeId="4v.1169194664001:0" resolveInfo="name" />
-                        </node>
-                      </node>
-                      <node role="operation:3" type="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation:3" id="7853931227643483905">
-                        <link role="baseMethodDeclaration:3" targetNodeId="2.~String.substring(int,int):java.lang.String" resolveInfo="substring" />
-                        <node role="actualArgument:3" type="jetbrains.mps.baseLanguage.structure.IntegerConstant:3" id="7853931227643483906">
-                          <property name="value:3" value="0" />
-                        </node>
-                        <node role="actualArgument:3" type="jetbrains.mps.baseLanguage.structure.IntegerConstant:3" id="7853931227643483907">
-                          <property name="value:3" value="1" />
-                        </node>
-                      </node>
-                    </node>
-                    <node role="operation:3" type="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation:3" id="7853931227643483908">
-                      <link role="baseMethodDeclaration:3" targetNodeId="2.~String.toUpperCase():java.lang.String" resolveInfo="toUpperCase" />
-                    </node>
-                  </node>
+                <node role="leftExpression:3" type="jetbrains.mps.baseLanguage.structure.StringLiteral:3" id="9064351649708315034">
+                  <property name="value:3" value="get" />
                 </node>
               </node>
             </node>
