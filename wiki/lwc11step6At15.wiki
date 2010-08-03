@@ -31,7 +31,7 @@ Since we now want to use Java constructs in our own language, we have make the e
 
 In the entities language we had developed our own type stuff: Type, PrimitiveType, StringType, IntType, BoolType and EntityType. BaseLanguage comes with its own representation for all of these (except the EntityType, of course). We could somehow integrate our own types with the types in BaseLanguage. But it is much more pragmatic to throw our own types away.
 
-So, in our entities language, we delete Type, PrimitiveType, StringType, IntType and BoolType. You can simply select the concept structure and delete it. Of course various dependent things are now broken. You can run Check Model on the entities language to see all the problems:
+So, in our entities language, we delete Type, PrimitiveType, StringType, IntType and BoolType. You can simply select the corresponding concept structure nodes and delete them. In the dialog do not select "Safe delete". Of course various dependent things are now broken. You can run Check Model on the entities language to see all the problems:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-modelChecker.png
 
