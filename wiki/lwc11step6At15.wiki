@@ -78,7 +78,7 @@ The interesting things is the two conditional cells, marked up by the question m
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-condCell.png
 
-It determines when the cell is shown -- so, it only shows iff the expression is not null. We do the same thing for the equals sign and the derivationExpression itself. We've put the equals sign and the expression cells into an additional indent collection, so we only need one condition.
+It determines when the cell is shown -- so, it only shows if the expression is not null. We do the same thing for the equals sign and the derivationExpression itself. We've put the equals sign and the expression cells into an additional indent collection, so we only need one condition.
 
 Now, the question is: how can this expression become non-null if you don't even show it, so nobody can enter something into it? This is a good case for using an intention. You can press alt-enter on any attribute and get:
 
@@ -103,7 +103,7 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-deri
 
 So far so good. We can now add any kind of valid Java expression for derived attributes. However, we cannot reference existing attributes of the same entity in these expression -- rendering them entirely useless in the current form :-)  Let's fix this.
 
-We use the same approach we've used before, basically a use of GoF's Adapter pattern. We define a suconcept of Java's eexpression called EARefExpr that references an EntityAttribute:
+We use the same approach we've used before, basically a use of GoF's Adapter pattern. We define a subconcept of Java's expression called EARefExpr that references an EntityAttribute:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefAttr.png
 
