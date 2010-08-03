@@ -138,10 +138,9 @@ Here is the code we write:
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-intwrapper2.png
 
   * In the can substitute query, we use pattern matching to check whether the entered text is actually   a number.
+  * To use pattern matching you first have to import the corresponding language. Press ALT-Enter and add "jetbrains.mps.baseLanguage.regexp" to used Languages
   * in the matching text we simply return the pattern (we could change it here to something else...)
   * and then in the Create Child Node section, we create a new IntConstantExpression and set the value   as a number.
   
 We can now simply enter the actual number, and the system automatically creates the necessary IntInstance.
-
-
 
