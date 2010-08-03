@@ -15,7 +15,7 @@ http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-9-at14.zip
 
 This step is about introducing something like namespaces. This requires support for scoping of references. We've already shown how this works in previous examples, so this task should not be a challenge.
 
-To keep it simple (while still fulfilling the task) we've deicided to give EntityResources a name, and you'll have to use an import statement to make the elements in other EntityResources visible.
+To keep it simple (while still fulfilling the task) we've decided to give EntityResources a name, and you'll have to use an import statement to make the elements in other EntityResources visible.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step9At14-import.png
 
@@ -31,7 +31,7 @@ Next up is the definition of scopes. The first scope is the one for the import s
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step9At14-importScope.png
 
-The next scope we should adress is the one for the EntityType, because it is where other Entities are references; this reference should be constrained to Entities in  our own resource, plus in the imported resources. In other words, if, in the above example, you remove the import, the reference to Car should break. Here is the code:
+The next scope we should address is the one for the EntityType, because it is where other Entities are references; this reference should be constrained to Entities in  our own resource, plus in the imported resources. In other words, if, in the above example, you remove the import, the reference to Car should break. Here is the code:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step9At14-entityTypeScope.png
 
@@ -42,4 +42,3 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step9At14-beha
 The reason why it is a good idea to factor this into a behaviour is that we also call this same method, as can be seen from the scope definition of the EntityInstance:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step9At14-entityInstance.png
-
