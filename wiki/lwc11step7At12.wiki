@@ -8,7 +8,7 @@ The initialization values in the instance-DSL must be of the same type as the ty
 
 = Code =
 
-http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-6-at15.zip
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-7-at12.zip
 
 = Details =
 
@@ -70,6 +70,4 @@ As you can see, we get a red underline because the expression's type is string a
 Let's finish by implementing the type system rules for the instance language. This specifically means to check that the type of the expression that is used as the value on the right side of the equals the type of the attribute we initialize. At this point this should be obvious:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleEAValue.png
-
-
 
