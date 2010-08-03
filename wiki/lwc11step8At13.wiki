@@ -24,7 +24,7 @@ Our new language also contains the generator. We'll take a look at it in detail 
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-projectStructure.png
 
-One is stereotyped @generator; this one is the one that contains the templates. The other one is a "normal" model that contains some utility classes we will use below. 
+One is stereotyped @generator; this one contains the templates. The other one is a "normal" model that contains some utility classes we will use below. 
 
 Let us first look at the generator model. It contains a mapping configuration that has a root mapping rule that maps an EntityResource with the ADatabase template. Nothing special so far.
 
@@ -36,14 +36,15 @@ This one macro, as you can see, replaces the whole database with what the create
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-trafoCode.png
 
-As you can see, you can do "normal Java programming" to work on the tree. So whenever the template approach seems to cumbersome, you can always fall back to a transformation script. As you can see, you can also start with a template and then mix it with script code. 
+Whenever the template approach seems to cumbersome, you can always fall back to a transformation script. This script looks like "normal Java programming" on a tree.. 
+As you can see, its also possible to start with a template and then mix it with script code. 
 
 At this point, the transformation itself is finished. We can now try it out.
 
 
 == Running the transformation ==
 
-There is one special thing about this transformation: it there is no subsequent "code generator" that generates text from the database. So in order to see the result of the transformation, you need to switch on the Save Transient Models option in the Generate menu.
+One special thing about this transformation: there is no subsequent "code generator" that generates text from the database. So in order to see the result of the transformation, you need to switch on the Save Transient Models option in the Generate menu.
 
 Then you need to tell your example model that it should not just generate Java code, but also engage the database generator. On the Advanced tab in model properties you can add this language to the Languages Engaged on Generation list.
 
