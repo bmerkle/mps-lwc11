@@ -16,15 +16,15 @@ There are two ways how you can implement typing rules.
 
 == Introduction and Overview ==
 
-For one, you can simply use one of these NonTypesystemRules we mentioned before during the name unqiueness check. They basically allow you to write any arbitrary Java code and output error messages if the code so decides. So you can implement your own type checking rules in whatever way you want (maybe using external type checkers or whatever and invoke it from a NonTypesystemRule) and that's that. 
+For one, you can simply use one of these NonTypesystemRules we mentioned before during the name uniqueness check. They basically allow you to write any arbitrary Java code and output error messages if the code so decides. So you can implement your own type checking rules in whatever way you want (maybe using external type checkers or whatever and invoke it from a NonTypesystemRule) and that's that. 
 
-There is, however, also another approach that is, for most cases, easier to use and more powerful. This is approach is based on MPS' direct support for typesystems.
+There is, however, also another approach that is, for most cases, easier to use and more powerful. This is approach is based on MPS' direct support for type systems.
 
 Here is how it works in principle:
   
   * MPS has a generic type unification and checking engine
   * As a language developer, your job is to provide type system rules that are used by this engine. These rules either associate types with program elements, or constitute rules of the type of elements is calculated from the types of other elements.
-  * Types are represented as nodes. In other words, the things used the type system are instances of concepts. Often, you will use concepts you have already defined for the program structure. For exampe, the type of IntType is itself (or a clone). There are, however, also cases where you define concepts specifically for use in the type system. It is important to understand,though, that there is nothing inherently special about type nodes.
+  * Types are represented as nodes. In other words, the things used the type system are instances of concepts. Often, you will use concepts you have already defined for the program structure. For example, the type of IntType is itself (or a clone). There are, however, also cases where you define concepts specifically for use in the type system. It is important to understand,though, that there is nothing inherently special about type nodes.
   * Finally, MPS comes with a DSL for writing these typing rules, and we'll see this rule in action below. 
 
 == Implementing the type system for the entities language ==
@@ -42,7 +42,7 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-type
 
 This expression is a type correspondence rule (:==:) that says that the two type expressions on on either side must correspond. In this case we say that the typeof the whole attribute must correspond to a clone of the type child of the attribute. Since we assume the typeof the type to be known, this rule acts almost like an assignment. It is important to understand that MPS runs a non-trivial unification algorithm to  determine types, as we shall see later.
 
-You can now rebuld the language and go back to the example code, pressing ctrl-shift-T on the EntityAttribute. This is what you should see:
+You can now rebuild the language and go back to the example code, pressing ctrl-shift-T on the EntityAttribute. This is what you should see:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfo.png
 
@@ -52,7 +52,7 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-type
 
 Notice here how now the situation is more complex. We define two type correspondence rules. There are several ways how to fix a possible type error; you can either change the attribute's type or the expression. 
 
-Before this works we'll have to do one more thing, though. Notice that the derivationExpression is a tree of actual expression nodes (this is how expressions are built everywhere). For example it might contain the number 1 which has the int type. We have also created our own expression, the EARefExpr, which references another attribute. We have to define the type of this guy to make the type inference enging work.
+Before this works we'll have to do one more thing, though. Notice that the derivationExpression is a tree of actual expression nodes (this is how expressions are built everywhere). For example it might contain the number 1 which has the int type. We have also created our own expression, the EARefExpr, which references another attribute. We have to define the type of this guy to make the type inference engine work.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleEaRef.png
 
@@ -70,4 +70,3 @@ As you can see, we get a red underline because the expression's type is string a
 Let's finish by implementing the type system rules for the instance language. This specifically means to check that the type of the expression that is used as the value on the right side of the equals the type of the attribute we initialize. At this point this should be obvious:
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleEAValue.png
-
