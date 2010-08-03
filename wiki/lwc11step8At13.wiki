@@ -4,7 +4,7 @@
 
 1.3 Show how to do a model-to-model transformation. 
 
-Define an ER-meta model (Database, Table, Column) and transform the entity model into an instance of this ER meta model. 
+Define an ER meta model (Database, Table, Column) and transform the entity model into an instance of this ER meta model. 
 
 = Code =
 
@@ -14,7 +14,7 @@ http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-8-at13.zip
 
 As we have said several times, model transformation and code generation are the same process in MPS. In this sense, we will not learn anything new in this section: you simple define a new language (consisting of Database, Table, Column, with the usual properties and Relationships) and then you write transformation templates to do the transformation. Please take a look at the source code to understand the (trivial) ER language.
 
-However, you can also use another transformation approach: you can write (almost) everything as a script, avoiding most of the tempaltes stuff. Let's take a look.
+However, you can also use another transformation approach: you can write (almost) everything as a script, avoiding most of the templates stuff. Let's take a look.
 
 == Implementing a transformation script ==
 
