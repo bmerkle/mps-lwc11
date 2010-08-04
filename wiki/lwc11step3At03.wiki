@@ -72,6 +72,7 @@ https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniq
 Now we have to implement the actual check. 
 
 TODO mv: names of attr do not match in lwc11step3At03-uniqueNames2.png and lwc11step3At03-uniqueNames3.png (should be attribute)
+TODO bm: well, people will understand this.... remove the TODO?
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames3.png
 
