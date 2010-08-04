@@ -35,19 +35,9 @@ As the heading suggests, we want to create a Java class. Since we don't simply g
 
 Let's now create a root mapping rule (by pressing enter in the respective slot). For the concept, choose _Entity_. You now have to specify the template that performs the transformation. In the respective slot, press alt-enter and select "New Root Template". From the popup menu that shows up then, select _class_. The result should look like this:
 
-TODO mv:
-- mapping label should not be in the screen shot here...
-- screen shot should also contain Abandon Roots property here...
-
-TODO bm: 
-- maybe explain Abandon Roots already here (would make sense IMO)
-
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-mappingRule.png
 
 You can now ctrl-click onto the template name in the mapping configuration to open the newly created template. It should look something like this:
-
-TODO mv:
-wrong screenshot there should be no mapping labels. They are introduced later.
 
 https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template0.png
 
