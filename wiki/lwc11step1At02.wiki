@@ -8,7 +8,7 @@ In this chapter we will evolve the DSL, more specifically the abstract syntax (c
 
 = Code =
 
-http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-1-at01.zip
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-1-at02.zip
 
 = Details =
 
