@@ -20,6 +20,10 @@ Some statements about evolving a DSL. Why/how is can break
 
 Motivation + sample
 
-== Evolving the concrete syntax (concept)==
+== Evolving the concrete syntax (editor)==
 
 Motivation + sample
+
+== MPS scripts==
+
+scripts to evolve existing models, e.g. at the customer site.
