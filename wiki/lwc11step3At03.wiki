@@ -35,6 +35,7 @@ TODO bm:
   * disadvantage of current implementation: we get SOB exception for Entities with empty names ;-/
   * shorter and better implementation:propertyValue.equals(NameUtil.capitalize(propertyValue));
 TODO mv: change screenshot to contain new implementation; where does the NameUtil come from?
+
 TODO mr: search for "NameUtil" here: http://www.compago.de/confluence/display/md/Extending+MPS+BaseLanguage+by+Example+-+Bean-Klassen+ohne+Typisierung+generieren :)
 
 If you regenerate the language and go back to the example model, you cannot even enter a name with a lower case first character, it doesn't bind and the entered value stays red. The disadvantage is that you cannot define an error message here for your validation rule. So you might want to use the non typesystem rule approach to constraints defined below alternatively.
