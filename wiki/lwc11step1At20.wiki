@@ -2,7 +2,7 @@
 
 = Task =
 
-0.1 How to evolve the DSL without breaking existing models.
+2.0 How to evolve the DSL without breaking existing models.
 
 In this chapter we will evolve the DSL, more specifically the abstract syntax (concept) and the concrete syntax (editor) without breaking existing models.
 
