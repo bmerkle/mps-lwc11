@@ -19,7 +19,7 @@ Notice that the techniques used for implementing the type system would be the sa
 
 So this is task 1.5, providing support for manual code, exemplified by the derived attributes. In MPS, there is no real "manually written code", since you will do the coding in the same environment as the "modeling". Consequently, we have decided to implement the derived attributes as expressions directly in the entity declaration.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-result.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-result.png
 
 There are, of course, all kinds of other ways of where to put the code: in sepate constructs, as statement lists inside the entity etc. The example is the simplest way to do it, while still demonstrating the integration with Java.
 
@@ -33,7 +33,7 @@ In the entities language we had developed our own type stuff: Type, PrimitiveTyp
 
 So, in our entities language, we delete Type, PrimitiveType, StringType, IntType and BoolType. You can simply select the corresponding concept structure nodes and delete them. In the dialog do not select "Safe delete". Of course various dependent things are now broken. You can run Check Model on the entities language to see all the problems:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-modelChecker.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-modelChecker.png
 
 The errors are obvious: editors now reference non-existing concepts; you can simply delete the editors. Also, in the generator, the reduction rules for those concepts are of course broken. Delete them as well. The problems in the structure are more interesting.
 
@@ -43,7 +43,7 @@ A similar change has to be performed in the EntityAttribute: its type property m
 
 Notice that you can now use any Java type as the type of the attributes, try to press ctrl-space in the type slot of an EntityAttribute. This is not what we wanted! We want to use only the primitive types. We can achieve this by using the Can Be Parent constraint we mentioned before. Note how we use the link/../ and concept/../ concepts to access link and concept literals.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-canBeParent.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-canBeParent.png
  
 == Adapting Instance Expressions ==
 
@@ -51,11 +51,11 @@ A similar change should be performed in the instances language. The EntityAttrib
 
 So we can now write models/code similar to what we had before:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-anotherExample.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-anotherExample.png
 
 But the types are now Java primitive types, and the expressions (right side of =) are now Java expressions. This means we can automatically do this:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-yetAnotherExample.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-yetAnotherExample.png
 
 Nice :-)
 
@@ -66,37 +66,37 @@ Now you're back to where we were before, but based on Java.
 
 Now let's get to the derived attributes. We could use several approaches, for example, using a subconcept (DerivedAttribute extends EntityAttribute). An alternative solution is the one we implement here: each EntityAttribute has a 0..1 child of type Expression called derivationExpression.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-derivationExpression.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-derivationExpression.png
 
 The convention is that whenever this expression is not null, then we have a derived attribute.
 
 So the first consequence is for the editor: it must show the keyword "derived" if the expression is not null. Similarly, the editor has to show the actual derivationExpression if it is not null. Here is the new editor definition:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-conditionalEditor.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-conditionalEditor.png
 
 The interesting things is the two conditional cells, marked up by the question mark. If you click on the "derived" cell and take a look at the inspector, you can see the Show If condition:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-condCell.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-condCell.png
 
 It determines when the cell is shown -- so, it only shows if the expression is not null. We do the same thing for the equals sign and the derivationExpression itself. We've put the equals sign and the expression cells into an additional indent collection, so we only need one condition.
 
 Now, the question is: how can this expression become non-null if you don't even show it, so nobody can enter something into it? This is a good case for using an intention. You can press alt-enter on any attribute and get:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-intentionExample.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-intentionExample.png
 
 Selecting the intention gives you:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-intentionExample2.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-intentionExample2.png
 
 You can now enter an expression.
 
 Let's see how to do this. On the language, use the context menu to create an Intentions aspect for the entities language. On it, use the context menu to create a new Intention Declaration.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-emptyIntention.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-emptyIntention.png
 
 An intention has a name, it is associated (i.e. accessible from) an concept, it has an expression that is used as the label, it has a condition that determines whether it is applicable in a given context, and it has the body which is run when the intention is executed. Below is the code for the intention at hand. The comments should explain what's going on.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-derivationIntention.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-derivationIntention.png
 
 
 == Referencing Attributes ==
@@ -105,15 +105,15 @@ So far so good. We can now add any kind of valid Java expression for derived att
 
 We use the same approach we've used before, basically a use of GoF's Adapter pattern. We define a subconcept of Java's expression called EARefExpr that references an EntityAttribute:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefAttr.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefAttr.png
 
 Whenever we have a reference, we also need to define a scope. Here it is:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefAttrScope.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefAttrScope.png
 
 From the expression, we climb up the tree until we find an Entity (the plus in the ancestor function says that we should include the immediate parent in the search). And then we return its attributes, without the one we're currently defining the expression for (no recursive definitions!).
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefAttrScope2.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefAttrScope2.png
 
 Regenerate the language and play with it. It should work.
 
@@ -127,31 +127,31 @@ We first have to adapt the existing generator in the following way:
   
 To make this simpler, we first create a utility behaviour on the EntityAttribute:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-isDerived.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-isDerived.png
 
 We can then adapt the generator to only generate members and setters for non-derived attributes:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-membersForNonDerived.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-membersForNonDerived.png
 
 The interesting place is the getter, where we need different bodies depending on whether the thing is derived or not. I have implemented this with two conditional generation rules:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-conditionalGenerator.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-conditionalGenerator.png
 
 In the first alternative, where the condition in the if returns true if the attribute is derived,  we embed the actual expression (more on this below). The second one returns the field in case it is non derived.
 
 Let's look at how we embed the derivationExpression in this method. They we do this is first by returning "something", in this case we use the string literal "12". We then use a COPY_SRC macro that replaces this string literal with the derivationExpression. Here is the code in  the body of the COPY_SRC macro:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-inspectorForCopySrc.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-inspectorForCopySrc.png
 
 It simply returns (a copy of) the derivationExpression *and* applies the reduction rules defined for the expression (elements) on the fly.
 
 So we're almost done. One step is missing. We have to deal with the references to other attributes, these EARefExpr. We have to transform them to calls to the respective getter. Here is the template, and I guess it warrants some explanation.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefExprRedRule.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-eaRefExprRedRule.png
 
 First of all: the red <TF  ... TF> thingies mark the so-called template fragment. In other words, only this part used to replace the input node when the reduction rule is executed. So why do we have all this other stuff?? The reason is that MPS templates have to be structurally correct. And since we want to be able to call another method (the getter!), we have find a way to put this "other method" somewhere so we can call it from withing the template fragment code. If you look at the code in the template fragment, it calls this (dummy) method called "setter". We then use the reference macro (->$) to replace it with a reference to the getter method generated from  the attribute our current EARefExpr references. Here is the code for the reference macro:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-refMacro.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-refMacro.png
 
 Here we simply construct the name of the target getter (yes, we should externalize this into a behaviour and call it from here and from the place where we generate the actual getter). 
 
@@ -161,7 +161,7 @@ Note also that we make use of the "trick" to return the name of the target eleme
 
 If we generate code from this model:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-exampleAgain.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-exampleAgain.png
 
 here is the generated code (the getGreeting() method is the interesting part):
 
