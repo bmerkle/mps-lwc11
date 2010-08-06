@@ -38,29 +38,29 @@ define this.
 
 We go into the Typesystem aspect of the entities language and create a new InferenceRule. We define it to be applicable to the EntityAttribute concept and give it a reasonable name, such as attr. We then add the code that's shown in the next screenshot:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRule.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRule.png
 
 This expression is a type correspondence rule (:==:) that says that the two type expressions on on either side must correspond. In this case we say that the typeof the whole attribute must correspond to a clone of the type child of the attribute. Since we assume the typeof the type to be known, this rule acts almost like an assignment. It is important to understand that MPS runs a non-trivial unification algorithm to  determine types, as we shall see later.
 
 You can now rebuild the language and go back to the example code, pressing ctrl-shift-T on the EntityAttribute. This is what you should see:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfo.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfo.png
 
 Now let's go one step further. In derived attributes there is another constraint. The type of the derivationExpression must correspond to the type of the attribute. We can express this constraint inside the same InferenceRule by changing it like so:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleDerivation.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleDerivation.png
 
 Notice here how now the situation is more complex. We define two type correspondence rules. There are several ways how to fix a possible type error; you can either change the attribute's type or the expression. 
 
 Before this works we'll have to do one more thing, though. Notice that the derivationExpression is a tree of actual expression nodes (this is how expressions are built everywhere). For example it might contain the number 1 which has the int type. We have also created our own expression, the EARefExpr, which references another attribute. We have to define the type of this guy to make the type inference engine work.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleEaRef.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleEaRef.png
 
 I guess the code can readily be understood: the type of the reference expression is the same as the type of the attribute it references.
 
 Now we can go back to our example and see what happens:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typesysError.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typesysError.png
 
 As you can see, we get a red underline because the expression's type is string and the attribute is declared to be an int. You will also get the error in the Model Checker if you run it. It is also possible to associate quick fixes with these checks (to be explained later).
 
@@ -69,4 +69,4 @@ As you can see, we get a red underline because the expression's type is string a
 
 Let's finish by implementing the type system rules for the instance language. This specifically means to check that the type of the expression that is used as the value on the right side of the equals the type of the attribute we initialize. At this point this should be obvious:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleEAValue.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step7At12-typeInfRuleEAValue.png
