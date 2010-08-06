@@ -22,7 +22,7 @@ As you can see when you look at the code, our new language that contains the dat
 
 Our new language also contains the generator. We'll take a look at it in detail in a minute, but since it transforms entities to tables, our language has to have a dependency to the entities language. If you look at the generator, you can see that it contains two models.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-projectStructure.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-projectStructure.png
 
 One is stereotyped @generator; this one contains the templates. The other one is a "normal" model that contains some utility classes we will use below. 
 
@@ -30,11 +30,11 @@ Let us first look at the generator model. It contains a mapping configuration th
 
 The ADatabase template is somewhat special, since it contains only one macro:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-template.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-template.png
 
 This one macro, as you can see, replaces the whole database with what the createDatabase function in the Helper class returns. In other words, we have moved the whole creation of the database, based on the input EntityResource, into one helper function. Here is the  transformation code, with comments:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-trafoCode.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-trafoCode.png
 
 Whenever the template approach seems to cumbersome, you can always fall back to a transformation script. This script looks like "normal Java programming" on a tree.. 
 As you can see, its also possible to start with a template and then mix it with script code. 
@@ -48,10 +48,10 @@ One special thing about this transformation: there is no subsequent "code genera
 
 Then you need to tell your example model that it should not just generate Java code, but also engage the database generator. On the Advanced tab in model properties you can add this language to the Languages Engaged on Generation list.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-advanced.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-advanced.png
 
 If you now Generate Files, you can see the transient models at the end of the project explorer tree.
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-transient.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step8At13-transient.png
 
 You can open the databases and see the result.
