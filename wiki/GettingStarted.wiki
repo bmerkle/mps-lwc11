@@ -37,7 +37,9 @@ This tutorial expects that you have heard about MPS and how it works in general 
 
 == Phase 2 ==
 
-tbd
+  * [http://code.google.com/p/mps-lwc11/wiki/lwc11step1At20 Task 2.0] How to evolve the DSL without breaking existing models.
+  * [http://code.google.com/p/mps-lwc11/wiki/lwc11step2At20 Task 2.1] How to work with the models efficiently in the team.
+  * [http://code.google.com/p/mps-lwc11/wiki/lwc11step3At20 Task 2.3] Demonstrate Scalability of the tools.
 
 == Phase 3 ==
 
