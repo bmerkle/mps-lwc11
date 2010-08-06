@@ -25,11 +25,11 @@ Note that all of these constraints are not "just" constraints in the sense that 
 
 Let us implement a simple check that makes sure that properties start with a capital letter. Open the Entity concept and select the constraints tab. It is probably empty, so you should click into the white area to create a new one. You can then create a new property constraint by pressing enter in the respective slot. This is how the result will look:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-propertyConstraint.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-propertyConstraint.png
 
 You can now choose the name property in the respective field and press enter in the "is valid" slot. Here you can now enter a boolean that determines whether the value is valid. Here is a possible implementation:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-propertyConstraintImpl.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-propertyConstraintImpl.png
 
 TODO bm: 
   * disadvantage of current implementation: we get SOB exception for Entities with empty names ;-/
@@ -61,7 +61,7 @@ name uniqueness.
 Go to the type system aspect and use the context menu to create a NonTypesystemRule. Give it a name (such as 
 "checkNameUniqueness") and in the condition slot press control space to select the concept option. This leads to:
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames1.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames1.png
 
 We then have to define, for which concept this check should be applicable. We want to write a constraint that
 checks that attribute names are unique. We write this constraint from the perspective of the Attribute, by checking
@@ -69,14 +69,14 @@ if in the Attribute's parent's attributes there are more than one that have the 
 run the check (actually, this very statement is easier to program than to say :-)) So we select _EntityAttribute_ 
 as the concept and give it a reasonably short local name (the one after the "as").
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames2.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames2.png
 
 Now we have to implement the actual check. 
 
 TODO mv: names of attr do not match in lwc11step3At03-uniqueNames2.png and lwc11step3At03-uniqueNames3.png (should be attribute)
 TODO bm: well, people will understand this.... remove the TODO?
 
-https://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames3.png
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step3At03-uniqueNames3.png
 
 Let's look at the code in detail:
 
