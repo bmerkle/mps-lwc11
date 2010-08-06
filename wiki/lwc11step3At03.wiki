@@ -36,7 +36,7 @@ TODO bm:
   * shorter and better implementation:propertyValue.equals(NameUtil.capitalize(propertyValue));
 TODO mv: change screenshot to contain new implementation; where does the NameUtil come from?
 
-TODO mr: search for "NameUtil" here: http://www.compago.de/confluence/display/md/Extending+MPS+BaseLanguage+by+Example+-+Bean-Klassen+ohne+Typisierung+generieren :)
+TODO mr: search for "NameUtil" [http://www.compago.de/confluence/display/md/Extending+MPS+BaseLanguage+by+Example+-+Bean-Klassen+ohne+Typisierung+generieren here] :)
 
 If you regenerate the language and go back to the example model, you cannot even enter a name with a lower case first character, it doesn't bind and the entered value stays red. The disadvantage is that you cannot define an error message here for your validation rule. So you might want to use the non typesystem rule approach to constraints defined below alternatively.
 
@@ -95,4 +95,4 @@ message should be associated with. Alternatively, there is also a warning constr
 After rebuilding the language, you can try to add two attributes with the same name. If you do, these two are both
 underlined red, and you also get the error messages reported in the model checker.
 
-Also a tip: with CTRL-ALT-LeftClick on a error message you can go back to the rule which fired/triggered this error message. Also see the [http://code.google.com/p/mps-lwc11/wiki/SomeMPSBasics Basics] document for further tricks.
+Also a tip: with Ctrl-Alt-LeftClick on a error message you can go back to the rule which fired/triggered this error message. Also see the [http://code.google.com/p/mps-lwc11/wiki/SomeMPSBasics Basics] document for further tricks.
