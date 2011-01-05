@@ -14,9 +14,11 @@ Sometimes you have to use the intentions to achieve something. For example, maki
 
 Also, some things (e.g. in the editor definition) must be specified in the inspector. Make sure it is always open (alt-2 or *Window->Tool Window->Inspector* or via the button labeled _Inspector_ usually placed at bottom right). It is generally a good idea to keep it open, since it always shows you the name of and provides a direct link to the concept you're currently editing or supposed to instantiate. Often you can find also attributes that are for some reason not displayed in the main editing area here, e.g. making a class "abstract" as alternative to intentions explained above.
 
-Pressing enter in a cell adds another cell after the current one. Pressing Insert adds one before the current one.
-´
-Pressing Ctrl-S on any element opens its concept.
+Pressing enter in a cell adds another cell after the current one. 
+Pressing Insert adds one before the current one.
+
+Pressing Ctrl-Shift-S on any element opens its concept (aka structure).
+Pressing Ctrl-Shift-E on any element opens its editor.
 
 Another very useful "trick" is the Back functionality, that incrementally goes back to previous edit locations. I have used the Settings to assign the Alt-Backspace keyboard shortcut just like in current browsers. Very useful.
 
