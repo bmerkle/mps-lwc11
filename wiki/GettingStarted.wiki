@@ -4,7 +4,7 @@
 
 This set of Wiki pages is the documentation for the LWC11 language workbench competition described here: http://www.languageworkbenches.net/
 
-The PDF below outlines a task that will be implemented with various different language workbenches: http://www.delphino-consultancy.nl/lwc/contest.html
+The PDF below outlines a task that will be implemented with various different language workbenches: http://www.languageworkbenches.net/LWCTask-1.0.pdf
 
 The task is relatively trivial. But it has been designed to illustrate as many properties of language workbenches as possible. As such, it can serve as a good introduction to the respective tools.
 
