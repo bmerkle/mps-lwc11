@@ -31,8 +31,10 @@ Based on the task we are supposed to implement, it is obvious that we need a lan
 
 http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-creatingTheEntityConcept.png
 
-In MPS, projects contain languages (icon L) and solutions (icon S). 
-A solution is a container for non-language things. A solution and a language in turn consist of models. A model corresponds to a physical resource, basically an XML file. Each model contains any number of root notes, which are instances of concepts that have their _instance can be root_ property set to _true_. In our example, we want to make sure that a model can contain several entities, so we add an additional language concept that acts as a container for entities and is itself a rootable concept. We call this concept _EntityResource_. Please use the same approach as above to create this new concept.
+In MPS, projects contain languages (icon L) and solutions (icon S).
+A language is a container for the actual language *definition*. 
+A solution is a container for the actual *usage* of a language and their properties. 
+A solution and a language in turn consist of models. A model corresponds to a physical resource, basically an XML file. Each model contains any number of root notes, which are instances of concepts that have their _instance can be root_ property set to _true_. In our example, we want to make sure that a model can contain several entities, so we add an additional language concept that acts as a container for entities and is itself a rootable concept. We call this concept _EntityResource_. Please use the same approach as above to create this new concept.
 
 As we just mentioned, the _EntityResource_ should contain any number of entities. To enable this, we must add a child relationship to the _Entity_ concept. The following screenshot should be self explaining and shows the result. Notice how the _instance can be root_ property is set to _true_.
 
