@@ -4,4 +4,5 @@ This tutorial is based on [http://jetbrains.com/mps JetBrains MPS], unsurprising
 
 You can find additional documentation [http://www.jetbrains.com/mps/documentation/index.html here]. 
 
-The code has been built and tested with version 1.5 RC3, but we assume it will also work with the final 1.5 release as it becomes available. You can get the RC3 from [http://confluence.jetbrains.net/display/MPS/JetBrains+MPS+1.5+RC+Download+Page here].
+The code has been built and tested with version 1.5.x 
+You can get MPS 1.5.x from [http://www.jetbrains.com/mps/download/index.html here].
