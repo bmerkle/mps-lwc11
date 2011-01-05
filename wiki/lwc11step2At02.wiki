@@ -99,7 +99,9 @@ http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-templ
 
 COPY_SRC macros invoke existing reduction rules (see below) to in-place transform the node that is returned in the macro function. Because our function returns the type of the attributes, reduction rules that are defined for the _Type_ subtypes are executed automatically. The next step, thus, has to be to define these reduction rules.
 
-TODO bm: explain that all of these operations are available via special intentions so you do not have to write the code. For simple cases there is often a intention offered.
+Please also notice that most of these operations are available via special intentions so you do not have to write the code. For simple cases there is often a intention offered.
+
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-template2-intentions.png
 
 We go back to the mapping configuration and press enter in the reduction rules section. This gives us a new, empty reduction rule. Starting with a reduction rule for strings, we select _StringType_ as the applicable concept in the reduction rule (make sure you actually select the one from the entities language). In the consequences slot, we don't create a new template as we did before; rather, we press Ctrl-space and select "inline template", which means that the thing we reduce to is directly specified in the mapping configuration. This is useful for small, simple templates. In this case, we simply want to generate a Java string type. So we simply select _StringType_, this time the one from j.m.baseLanguage. That's all! We do the same for boolean and int.
 
@@ -132,9 +134,7 @@ We then have to attach this label to the mapping rule that creates the class fro
 
 http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-attachedMappingLabel.png
 
-We can now go back to the function in the reference macro (in the inline template for _EntityType_, in the mapping configuration). The function uses utility to get the output thing created from the respective input, using the label.
-
-TODO bm: function to use is: "get output by label and input"...
+We can now go back to the function in the reference macro (in the inline template for _EntityType_, in the mapping configuration). The function uses utility to get the output thing created from the respective input, using the label. The function to use is "get output by label and input"...
 
 http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step2At02-referenceMacroFunction.png
 
@@ -175,8 +175,6 @@ Except for the getters and setters we're pretty much done. These are, however, r
   * and we add a COPY_SRC macro around the type of the argument, using the existing reduction rule for the attribute's type.
 
 To capitalize the attribute name in setBla we use the utility method "set" + NameUtil.captalize(node.name). To use NameUtil you must import jetbrains.mps.util@java_stub into the generator 
-
-TODO bm: change the code from get" + node.name.substring(0, 1).toUpperCase() + node.name.substring(1); to use NameUtil...
 
 This is how it looks:
 
