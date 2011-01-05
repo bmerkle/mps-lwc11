@@ -85,7 +85,7 @@ http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-first
 
 The syntax is relatively boring, because we didn't define any syntactic sugar for the _Entity Resource_, it simply contains a collection of entities. The symbol you see represents this empty collection. Placing the cursor within this field, you can either press enter or type "entity" (remember the alias) to create a new entity. Notice how the syntax of the newly created entity resembles the editor we defined above. You can now go ahead and enter a name for the new entity, for example "Person". 
 
-TODO: we should add a screenshot here
+http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-firstSolutionWithEntityPersonCar.png
 
 Selecting the closing curly brace of the person entity, you can now press enter to add new entities. This completes the first iteration. We can now continue to add attributes for the entities.
 
@@ -115,7 +115,7 @@ The last step to complete this first task is the ability to use other entities a
 
 We solve this dilemma by creating a new concept called _EntityType_ which extends _Type_. We add to this new concept a reference relationship (make sure you don't accidentally make it a child!) called entity with a cardinality of 1:
 
-TODO: explain Smart References?
+(NB: actually this creates a Smart Reference which will be desribed later)
 
 http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step1At01-entityType.png
 
