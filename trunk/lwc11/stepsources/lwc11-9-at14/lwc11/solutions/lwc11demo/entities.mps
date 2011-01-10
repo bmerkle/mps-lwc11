@@ -34,7 +34,7 @@
       </node>
       <node role="attributes:0" type="entities.structure.EntityAttribute:0" id="2900074371115301232">
         <property name="name:0" value="greeting" />
-        <node role="type:0" type="jetbrains.mps.baseLanguage.structure.IntegerType:3" id="2900074371115319861" />
+        <node role="type:0" type="jetbrains.mps.baseLanguage.structure.StringType:3" id="1763546981287022414" />
         <node role="derivationExpression:0" type="jetbrains.mps.baseLanguage.structure.TernaryOperatorExpression:3" id="2900074371115319690">
           <node role="condition:3" type="jetbrains.mps.baseLanguage.structure.EqualsExpression:3" id="2900074371115319695">
             <node role="rightExpression:3" type="jetbrains.mps.baseLanguage.structure.StringLiteral:3" id="2900074371115319698">
@@ -90,7 +90,7 @@
       </node>
       <node role="attributes:0" type="entities.structure.EntityAttribute:0" id="7853931227643494776">
         <property name="name:0" value="firstName" />
-        <node role="type:0" type="jetbrains.mps.baseLanguage.structure.IntegerType:3" id="2900074371115319860" />
+        <node role="type:0" type="jetbrains.mps.baseLanguage.structure.StringType:3" id="1763546981287022413" />
       </node>
     </node>
     <node role="contents:0" type="instances.structure.EntityInstance:0" id="7853931227643500690">
