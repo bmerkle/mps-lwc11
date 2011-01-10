@@ -112,6 +112,8 @@ http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-wrapp
 
 In the actions at the end press ctrl-space and select Add Custom Items. As the OutputConcept select EntityInstance again. In the empty slot below press ctrl-space and select Wrapper. Select EntityType as the content of the slot behind "wrap". This is how it should look: 
 
+TODO: wrong screenshot: missing "EntityType"...
+
 http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-wrapper4.png
 
 What have we done so far? We have told MPS that wherever an EntityInstance is expected, it is also ok to put an EntityType (we "wrap" an EntityInstance with an EntityType). Remember, an EntityType (defined in the entities language) is basically something that in turn contains a reference to an Entity. So whenever we press ctrl-space in a place where an EntityInstance is expected, we are also proposed an EntityType. But wait! An EntityType is a smart reference, so instead of allowing the creation of a new EntityType (and then selecting the Entity it points to), MPS let's you directly select the target Entity. End result: whenever there's an EntityInstance expected, we can now directly choose an Entity!
