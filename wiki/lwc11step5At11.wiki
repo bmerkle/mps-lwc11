@@ -140,7 +140,7 @@ Here is the code we write:
 http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step5At11-intwrapper2.png
 
   * In the can substitute query, we use pattern matching to check whether the entered text is actually   a number.
-  * To use pattern matching you first have to import the corresponding language. Press ALT-Enter and add "jetbrains.mps.baseLanguage.regexp" to used Languages
+  * To use pattern matching you first have to import the corresponding language. Press ALT-Enter and add "jetbrains.mps.baseLanguage.regexp" to the actions module in the instances languages. It is important to set the dependecy in the actions module (non-trans)
   * in the matching text we simply return the pattern (we could change it here to something else...). To create this node, use "QueryFunction_SubstituteString" as substituion.
   * and then in the Create Child Node section, we create a new IntConstantExpression and set the value   as a number.
   
