@@ -4,7 +4,7 @@
 
 1.2 Demonstrate how to implement runtime type systems. 
 
-The initialization values in the instance-DSL must be of the same type as the types of the properties.
+The initialization values in the instance language must be of the same type as the types of the properties.
 
 = Code =
 
