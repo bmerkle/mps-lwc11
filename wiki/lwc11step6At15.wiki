@@ -72,7 +72,7 @@ The convention is that whenever this expression is not null, then we have a deri
 
 So the first consequence is for the editor: it must show the keyword "derived" if the expression is not null. Similarly, the editor has to show the actual derivationExpression if it is not null. Here is the new editor definition:
 
-TODO: is missing....
+TODO: is missing
 
 http://mps-lwc11.googlecode.com/svn/trunk/lwc11/wiki-images/lwc11step6At15-conditionalEditor.png
 
