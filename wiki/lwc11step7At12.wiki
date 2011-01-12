@@ -12,7 +12,7 @@ http://mps-lwc11.googlecode.com/svn/trunk/lwc11/archives/lwc11-7-at12.zip
 
 = Details =
 
-There are two ways how you can implement typing rules.
+There are two ways how you can implement type systems.
 
 == Introduction and Overview ==
 
