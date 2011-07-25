@@ -6,3 +6,9 @@ You can find additional documentation [http://www.jetbrains.com/mps/documentatio
 
 The code has been built and tested with version 1.5.x 
 You can get MPS 1.5.x from [http://www.jetbrains.com/mps/download/index.html here].
+The corresponding sources can be found in SVN under https://mps-lwc11.googlecode.com/svn/tags/MPS-1.5.1
+
+The code also has been built and tested with version 2.x
+You can get MPS 2.x from
+[http://download.jetbrains.com/mps/MPS-20.7460-RC2.exe].
+The corresponding sources can be found in SVN under https://mps-lwc11.googlecode.com/svn/tags/MPS-2.0.RC2
