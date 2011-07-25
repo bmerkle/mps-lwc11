@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="lwc11demo" uuid="9ff69550-3028-4226-af54-22e31087d98c" extenallyVisible="true" compileInMPS="true" java-stubs-enabled="false">
+<solution name="lwc11demo" uuid="9ff69550-3028-4226-af54-22e31087d98c" compileInMPS="true">
   <models>
     <modelRoot path="${solution_descriptor}/" namespacePrefix="" />
   </models>

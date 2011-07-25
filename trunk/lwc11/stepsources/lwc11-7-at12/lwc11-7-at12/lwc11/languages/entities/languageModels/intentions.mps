@@ -1,79 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model modelUID="r:05b0efc3-8d3e-49c4-87bf-bf7a8a514fb3(entities.intentions)">
-  <persistence version="4" />
-  <refactoringHistory />
+  <persistence version="7" />
   <language namespace="6ede504a-c7ec-4c49-9191-3d9d23eb4bc0(entities)" />
   <language namespace="d7a92d38-f7db-40d0-8431-763b0c3c9f20(jetbrains.mps.lang.intentions)" />
   <language namespace="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c8959036e(jetbrains.mps.baseLanguage.classifiers.constraints)" version="7" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c8959028c(jetbrains.mps.lang.structure.constraints)" version="11" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590292(jetbrains.mps.lang.structure.structure)" version="0" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590373(jetbrains.mps.baseLanguage.classifiers.structure)" version="0" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590283(jetbrains.mps.lang.core.constraints)" version="2" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c8959034f(jetbrains.mps.lang.intentions.constraints)" version="1" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590353(jetbrains.mps.lang.intentions.structure)" version="8" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902bc(jetbrains.mps.lang.sharedConcepts.structure)" version="0" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902db(jetbrains.mps.baseLanguage.blTypes.constraints)" version="0" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590361(jetbrains.mps.lang.plugin.constraints)" version="19" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590334(jetbrains.mps.baseLanguage.closures.constraints)" version="2" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="3" />
-  <languageAspect modelUID="r:fbcd9867-33ac-4cca-b510-29a3a4ed591f(entities.structure)" version="0" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590368(jetbrains.mps.lang.plugin.structure)" version="23" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902ba(jetbrains.mps.lang.sharedConcepts.constraints)" version="0" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590338(jetbrains.mps.baseLanguage.closures.structure)" version="3" />
-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902c1(jetbrains.mps.baseLanguage.constraints)" version="83" />
-  <devkit namespace="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
-  <maxImportIndex value="1" />
-  <import index="1" modelUID="r:fbcd9867-33ac-4cca-b510-29a3a4ed591f(entities.structure)" version="0" />
-  <node type="jetbrains.mps.lang.intentions.structure.IntentionDeclaration:8" id="2900074371115283885">
-    <property name="name:8" value="makeDerived" />
-    <link role="forConcept:8" targetNodeId="1.7853931227643443459:0" resolveInfo="EntityAttribute" />
-    <node role="descriptionFunction:8" type="jetbrains.mps.lang.intentions.structure.DescriptionBlock:8" id="2900074371115283886">
-      <node role="body:8" type="jetbrains.mps.baseLanguage.structure.StatementList:3" id="2900074371115283887">
-        <node role="statement:3" type="jetbrains.mps.baseLanguage.structure.ExpressionStatement:3" id="2900074371115298337">
-          <node role="expression:3" type="jetbrains.mps.baseLanguage.structure.StringLiteral:3" id="2900074371115298338">
-            <property name="value:3" value="toggle derived" />
+  <language namespace="7866978e-a0f0-4cc7-81bc-4d213d9375e1(jetbrains.mps.lang.smodel)" />
+  <language namespace="aee9cad2-acd4-4608-aef2-0004f6a1cdbd(jetbrains.mps.lang.actions)" />
+  <devkit namespace="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+  <import index="jv2p" modelUID="r:fbcd9867-33ac-4cca-b510-29a3a4ed591f(entities.structure)" version="0" />
+  <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
+  <import index="tp3j" modelUID="r:00000000-0000-4000-0000-011c89590353(jetbrains.mps.lang.intentions.structure)" version="8" implicit="yes" />
+  <import index="tpee" modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="3" implicit="yes" />
+  <import index="tp25" modelUID="r:00000000-0000-4000-0000-011c89590301(jetbrains.mps.lang.smodel.structure)" version="-1" implicit="yes" />
+  <import index="tpdg" modelUID="r:00000000-0000-4000-0000-011c895902a8(jetbrains.mps.lang.actions.structure)" version="23" implicit="yes" />
+  <roots>
+    <node type="tp3j.IntentionDeclaration" typeId="tp3j.1192794744107" id="2900074371115283885">
+      <property name="name" nameId="tpck.1169194664001" value="makeDerived" />
+      <link role="forConcept" roleId="tp3j.2522969319638198290" targetNodeId="jv2p.7853931227643443459" resolveInfo="EntityAttribute" />
+    </node>
+  </roots>
+  <root id="2900074371115283885">
+    <node role="descriptionFunction" roleId="tp3j.2522969319638093993" type="tp3j.DescriptionBlock" typeId="tp3j.1192794782375" id="2900074371115283886">
+      <node role="body" roleId="tpee.1137022507850" type="tpee.StatementList" typeId="tpee.1068580123136" id="2900074371115283887">
+        <node role="statement" roleId="tpee.1068581517665" type="tpee.ExpressionStatement" typeId="tpee.1068580123155" id="2900074371115298337">
+          <node role="expression" roleId="tpee.1068580123156" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="2900074371115298338">
+            <property name="value" nameId="tpee.1070475926801" value="toggle derived" />
           </node>
         </node>
       </node>
     </node>
-    <node role="executeFunction:8" type="jetbrains.mps.lang.intentions.structure.ExecuteBlock:8" id="2900074371115283888">
-      <node role="body:8" type="jetbrains.mps.baseLanguage.structure.StatementList:3" id="2900074371115283889">
-        <node role="statement:3" type="jetbrains.mps.baseLanguage.structure.IfStatement:3" id="2900074371115298339">
-          <node role="condition:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="2900074371115298803">
-            <node role="operand:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="2900074371115298343">
-              <node role="operand:3" type="jetbrains.mps.lang.intentions.structure.ConceptFunctionParameter_node:8" id="2900074371115298342" />
-              <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SLinkAccess" id="2900074371115298799">
-                <link role="link" targetNodeId="1.2900074371115283855:0" />
+    <node role="executeFunction" roleId="tp3j.2522969319638198291" type="tp3j.ExecuteBlock" typeId="tp3j.1192795911897" id="2900074371115283888">
+      <node role="body" roleId="tpee.1137022507850" type="tpee.StatementList" typeId="tpee.1068580123136" id="2900074371115283889">
+        <node role="statement" roleId="tpee.1068581517665" type="tpee.IfStatement" typeId="tpee.1068580123159" id="2900074371115298339">
+          <node role="condition" roleId="tpee.1068580123160" type="tpee.DotExpression" typeId="tpee.1197027756228" id="2900074371115298803">
+            <node role="operand" roleId="tpee.1197027771414" type="tpee.DotExpression" typeId="tpee.1197027756228" id="2900074371115298343">
+              <node role="operand" roleId="tpee.1197027771414" type="tp3j.ConceptFunctionParameter_node" typeId="tp3j.1192796902958" id="2900074371115298342" />
+              <node role="operation" roleId="tpee.1197027833540" type="tp25.SLinkAccess" typeId="tp25.1138056143562" id="2900074371115298799">
+                <link role="link" roleId="tp25.1138056516764" targetNodeId="jv2p.2900074371115283855" />
               </node>
             </node>
-            <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" id="2900074371115298807" />
+            <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_IsNotNullOperation" typeId="tp25.1172008320231" id="2900074371115298807" />
           </node>
-          <node role="ifTrue:3" type="jetbrains.mps.baseLanguage.structure.StatementList:3" id="2900074371115298341">
-            <node role="statement:3" type="jetbrains.mps.baseLanguage.structure.ExpressionStatement:3" id="2900074371115298808">
-              <node role="expression:3" type="jetbrains.mps.baseLanguage.structure.AssignmentExpression:3" id="2900074371115298815">
-                <node role="rValue:3" type="jetbrains.mps.baseLanguage.structure.NullLiteral:3" id="2900074371115298818" />
-                <node role="lValue:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="2900074371115298810">
-                  <node role="operand:3" type="jetbrains.mps.lang.intentions.structure.ConceptFunctionParameter_node:8" id="2900074371115298809" />
-                  <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SLinkAccess" id="2900074371115298814">
-                    <link role="link" targetNodeId="1.2900074371115283855:0" />
+          <node role="ifTrue" roleId="tpee.1068580123161" type="tpee.StatementList" typeId="tpee.1068580123136" id="2900074371115298341">
+            <node role="statement" roleId="tpee.1068581517665" type="tpee.ExpressionStatement" typeId="tpee.1068580123155" id="2900074371115298808">
+              <node role="expression" roleId="tpee.1068580123156" type="tpee.AssignmentExpression" typeId="tpee.1068498886294" id="2900074371115298815">
+                <node role="rValue" roleId="tpee.1068498886297" type="tpee.NullLiteral" typeId="tpee.1070534058343" id="2900074371115298818" />
+                <node role="lValue" roleId="tpee.1068498886295" type="tpee.DotExpression" typeId="tpee.1197027756228" id="2900074371115298810">
+                  <node role="operand" roleId="tpee.1197027771414" type="tp3j.ConceptFunctionParameter_node" typeId="tp3j.1192796902958" id="2900074371115298809" />
+                  <node role="operation" roleId="tpee.1197027833540" type="tp25.SLinkAccess" typeId="tp25.1138056143562" id="2900074371115298814">
+                    <link role="link" roleId="tp25.1138056516764" targetNodeId="jv2p.2900074371115283855" />
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node role="ifFalseStatement:3" type="jetbrains.mps.baseLanguage.structure.BlockStatement:3" id="2900074371115298819">
-            <node role="statements:3" type="jetbrains.mps.baseLanguage.structure.StatementList:3" id="2900074371115298820">
-              <node role="statement:3" type="jetbrains.mps.baseLanguage.structure.ExpressionStatement:3" id="2900074371115298821">
-                <node role="expression:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="2900074371115298828">
-                  <node role="operand:3" type="jetbrains.mps.baseLanguage.structure.DotExpression:3" id="2900074371115298823">
-                    <node role="operand:3" type="jetbrains.mps.lang.intentions.structure.ConceptFunctionParameter_node:8" id="2900074371115298822" />
-                    <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.SLinkAccess" id="2900074371115298827">
-                      <link role="link" targetNodeId="1.2900074371115283855:0" />
+          <node role="ifFalseStatement" roleId="tpee.1082485599094" type="tpee.BlockStatement" typeId="tpee.1082485599095" id="2900074371115298819">
+            <node role="statements" roleId="tpee.1082485599096" type="tpee.StatementList" typeId="tpee.1068580123136" id="2900074371115298820">
+              <node role="statement" roleId="tpee.1068581517665" type="tpee.ExpressionStatement" typeId="tpee.1068580123155" id="2900074371115298821">
+                <node role="expression" roleId="tpee.1068580123156" type="tpee.DotExpression" typeId="tpee.1197027756228" id="2900074371115298828">
+                  <node role="operand" roleId="tpee.1197027771414" type="tpee.DotExpression" typeId="tpee.1197027756228" id="2900074371115298823">
+                    <node role="operand" roleId="tpee.1197027771414" type="tp3j.ConceptFunctionParameter_node" typeId="tp3j.1192796902958" id="2900074371115298822" />
+                    <node role="operation" roleId="tpee.1197027833540" type="tp25.SLinkAccess" typeId="tp25.1138056143562" id="2900074371115298827">
+                      <link role="link" roleId="tp25.1138056516764" targetNodeId="jv2p.2900074371115283855" />
                     </node>
                   </node>
-                  <node role="operation:3" type="jetbrains.mps.lang.smodel.structure.Link_SetNewChildOperation" id="2900074371115298835" />
+                  <node role="operation" roleId="tpee.1197027833540" type="tpdg.NF_Link_SetNewChildOperation" typeId="tpdg.767145758118872830" id="2867600379859214173" />
                 </node>
               </node>
             </node>
@@ -81,6 +72,6 @@
         </node>
       </node>
     </node>
-  </node>
+  </root>
 </model>
 
