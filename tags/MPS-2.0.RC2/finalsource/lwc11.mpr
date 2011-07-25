@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="${project}/solutions/lwc11demo/lwc11demo.msd" folder="" />
+      <modulePath path="${project}/solutions/lwc11InJavaDemo/lwc11InJavaDemo.msd" folder="" />
+      <modulePath path="${project}/languages/entities/entities.mpl" folder="" />
+      <modulePath path="${project}/languages/instances/instances.mpl" folder="" />
+      <modulePath path="${project}/languages/entityRelationship/entityRelationship.mpl" folder="" />
+      <modulePath path="${project}/languages/entitiesInJava/entitiesInJava.mpl" folder="" />
+    </projectModules>
+    <genConfs />
+  </component>
+  <component name="MigrationState">
+    <option name="myState" value="DONE" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules />
+  </component>
+  <component name="ProjectRootManager" version="2" />
+  <component name="ProjectVersion">
+    <option name="version" value="2.0" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$/..">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchMap">
+                <map>
+                  <entry key="http://mps-lwc11.googlecode.com/svn/branches">
+                    <value>
+                      <list />
+                    </value>
+                  </entry>
+                  <entry key="http://mps-lwc11.googlecode.com/svn/tags">
+                    <value>
+                      <list />
+                    </value>
+                  </entry>
+                  <entry key="http://mps-lwc11.googlecode.com/svn/wiki">
+                    <value>
+                      <list />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="branchUrls">
+                <list>
+                  <option value="http://mps-lwc11.googlecode.com/svn/branches" />
+                  <option value="http://mps-lwc11.googlecode.com/svn/tags" />
+                  <option value="http://mps-lwc11.googlecode.com/svn/wiki" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="http://mps-lwc11.googlecode.com/svn/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$/.." vcs="svn" />
+  </component>
+</project>
+
