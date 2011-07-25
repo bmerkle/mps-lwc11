@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="entityRelationship" uuid="169ff556-e96e-409d-853a-17e6e2827514" java-stubs-enabled="false" compileInMPS="true" doNotGenerateAdapters="false">
+<language namespace="entityRelationship" uuid="169ff556-e96e-409d-853a-17e6e2827514" compileInMPS="true" doNotGenerateAdapters="false">
   <models>
     <modelRoot path="${language_descriptor}/languageModels" namespacePrefix="entityRelationship" />
   </models>
