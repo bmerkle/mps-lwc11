@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="entitiesInJava" uuid="77fe9460-a810-41d8-9c44-db0dc9a382c0" java-stubs-enabled="false" compileInMPS="true" doNotGenerateAdapters="false">
+<language namespace="entitiesInJava" uuid="77fe9460-a810-41d8-9c44-db0dc9a382c0" compileInMPS="true" doNotGenerateAdapters="false">
   <models>
     <modelRoot path="${language_descriptor}/languageModels" namespacePrefix="entitiesInJava" />
   </models>
@@ -34,6 +34,9 @@
     </generator>
   </generators>
   <sourcePath />
+  <usedLanguages>
+    <usedLanguage>fa8aeae9-4df9-4e13-bfb1-9b04c67ddb77(jetbrains.mps.debug.customViewers)</usedLanguage>
+  </usedLanguages>
   <usedDevKits>
     <usedDevKit>2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)</usedDevKit>
   </usedDevKits>
