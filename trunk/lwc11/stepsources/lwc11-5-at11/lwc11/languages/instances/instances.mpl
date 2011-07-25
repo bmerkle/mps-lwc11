@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="instances" uuid="499caeca-c698-4601-9c5b-f54d0e7d5ff3" java-stubs-enabled="false" compileInMPS="true" doNotGenerateAdapters="false">
+<language namespace="instances" uuid="499caeca-c698-4601-9c5b-f54d0e7d5ff3" compileInMPS="true" doNotGenerateAdapters="false">
   <models>
     <modelRoot path="${language_descriptor}/languageModels" namespacePrefix="instances" />
   </models>
