@@ -5,7 +5,7 @@
 
 # -----------------------------------------------------------
 # * project settings
-code/languages/*/*.dev.iws
+*.iws
 code/languages/*/build.properties
 
 # -----------------------------------------------------------
