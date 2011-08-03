@@ -1,0 +1,39 @@
+# -----------------------------------------------------------
+# General
+
+*.history
+
+# -----------------------------------------------------------
+# * project settings
+code/languages/*/*.dev.iws
+code/languages/*/build.properties
+
+# -----------------------------------------------------------
+# * languages
+lwc11/finalsource/languages/*/classes_gen
+lwc11/finalsource/languages/*/classes_gen.caches
+lwc11/finalsource/languages/*/source_gen
+lwc11/finalsource/languages/*/source_gen.caches
+lwc11/finalsource/languages/*/languageModels/structure.history
+
+# -----------------------------------------------------------
+# * solutions
+lwc11/finalsource/solutions/*/classes_gen
+lwc11/finalsource/solutions/*/classes_gen.caches
+lwc11/finalsource/solutions/*/source_gen
+lwc11/finalsource/solutions/*/source_gen.caches
+
+# -----------------------------------------------------------
+# steps * languages
+lwc11/stepsources/*/lwc11/languages/*/classes_gen
+lwc11/stepsources/*/lwc11/languages/*/classes_gen.caches
+lwc11/stepsources/*/lwc11/languages/*/source_gen
+lwc11/stepsources/*/lwc11/languages/*/source_gen.caches
+lwc11/stepsources/*/lwc11/languages/*/languageModels/structure.history
+
+# -----------------------------------------------------------
+# steps * solutions
+lwc11/stepsources/*/lwc11/solutions/*/classes_gen
+lwc11/stepsources/*/lwc11/solutions/*/classes_gen.caches
+lwc11/stepsources/*/lwc11/solutions/*/source_gen
+lwc11/stepsources/*/lwc11/solutions/*/source_gen.caches
