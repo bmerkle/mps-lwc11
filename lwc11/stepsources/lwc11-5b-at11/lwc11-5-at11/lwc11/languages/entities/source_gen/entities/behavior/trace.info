@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <unitInfo fileName="IResourceContent_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="9" endPosition="0" unitName="entities.behavior.IResourceContent_BehaviorDescriptor" />
+  <unitInfo fileName="EntityType_BehaviorDescriptor.java" startLine="6" startPosition="0" endLine="15" endPosition="0" unitName="entities.behavior.EntityType_BehaviorDescriptor" />
+  <unitInfo fileName="StringType_BehaviorDescriptor.java" startLine="6" startPosition="0" endLine="15" endPosition="0" unitName="entities.behavior.StringType_BehaviorDescriptor" />
+  <unitInfo fileName="IntType_BehaviorDescriptor.java" startLine="6" startPosition="0" endLine="15" endPosition="0" unitName="entities.behavior.IntType_BehaviorDescriptor" />
+  <unitInfo fileName="PrimitiveType_BehaviorDescriptor.java" startLine="6" startPosition="0" endLine="15" endPosition="0" unitName="entities.behavior.PrimitiveType_BehaviorDescriptor" />
+  <unitInfo fileName="Type_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="entities.behavior.Type_BehaviorDescriptor" />
+  <unitInfo fileName="EntityResource_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="entities.behavior.EntityResource_BehaviorDescriptor" />
+  <unitInfo fileName="Entity_BehaviorDescriptor.java" startLine="9" startPosition="0" endLine="22" endPosition="0" unitName="entities.behavior.Entity_BehaviorDescriptor" />
+  <unitInfo fileName="EntityAttribute_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="23" endPosition="0" unitName="entities.behavior.EntityAttribute_BehaviorDescriptor" />
+  <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="34" endPosition="0" unitName="entities.behavior.BehaviorAspectDescriptor" />
+  <root nodeId="7853931227643445366">
+    <nodeInfo nodeId="7853931227643445366" fileName="EntityAttribute_Behavior.java" startLine="7" startPosition="39" endLine="10" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Ljetbrains/mps/smodel/SNode;)V" />
+    <scopeInfo nodeId="7853931227643445368" fileName="EntityAttribute_Behavior.java" startLine="8" startPosition="43" endLine="8" endPosition="43" />
+    <scopeInfo nodeId="7853931227643445366" fileName="EntityAttribute_Behavior.java" startLine="7" startPosition="39" endLine="10" endPosition="0" />
+    <unitInfo nodeId="7853931227643445366" fileName="EntityAttribute_Behavior.java" startLine="7" startPosition="0" endLine="11" endPosition="0" unitName="entities.behavior.EntityAttribute_Behavior" />
+  </root>
+  <root nodeId="7853931227643482789">
+    <nodeInfo nodeId="7853931227643482789" fileName="PrimitiveType_Behavior.java" startLine="7" startPosition="37" endLine="10" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Ljetbrains/mps/smodel/SNode;)V" />
+    <scopeInfo nodeId="7853931227643482791" fileName="PrimitiveType_Behavior.java" startLine="8" startPosition="43" endLine="8" endPosition="43" />
+    <scopeInfo nodeId="7853931227643482789" fileName="PrimitiveType_Behavior.java" startLine="7" startPosition="37" endLine="10" endPosition="0" />
+    <unitInfo nodeId="7853931227643482789" fileName="PrimitiveType_Behavior.java" startLine="7" startPosition="0" endLine="11" endPosition="0" unitName="entities.behavior.PrimitiveType_Behavior" />
+  </root>
+</debugInfo>
+

@@ -10,6 +10,9 @@
         <modelRoot path="${language_descriptor}/generator/template" namespacePrefix="entityRelationship.generator.template" />
       </models>
       <external-templates />
+      <dependencies>
+        <dependency reexport="false">c30ec168-61b1-4fe2-804f-281e73acb02c(entities#7853931227643479890)</dependency>
+      </dependencies>
       <usedDevKits>
         <usedDevKit>2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)</usedDevKit>
       </usedDevKits>

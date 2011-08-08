@@ -12,6 +12,8 @@
       <external-templates />
       <dependencies>
         <dependency reexport="false">c30ec168-61b1-4fe2-804f-281e73acb02c(entities#7853931227643479890)</dependency>
+        <dependency reexport="false">9ff69550-3028-4226-af54-22e31087d98c(lwc11demo)</dependency>
+        <dependency reexport="false">169ff556-e96e-409d-853a-17e6e2827514(entityRelationship)</dependency>
       </dependencies>
       <usedLanguages>
         <usedLanguage>5dc5fc0d-37ef-4782-8192-8b5ce1f69f80(jetbrains.mps.baseLanguage.extensionMethods)</usedLanguage>
