@@ -9,7 +9,7 @@
   <language namespace="7a5dda62-9140-4668-ab76-d5ed1746f2b2(jetbrains.mps.lang.typesystem)" />
   <devkit namespace="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   <import index="md8o" modelUID="r:b40306ab-5b8b-48e2-8d8c-f76d217494ac(entityRelationship.structure)" version="-1" />
-  <import index="kj8g" modelUID="r:5acdc6c9-25f8-4578-95a7-3d37e74dd6e6(entities.generator.template.utils)" version="-1" />
+  <import index="k2do" modelUID="r:98d3d983-de4e-47a4-b376-7840f840376b(entityRelationship.generator.template.utils)" version="-1" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
   <import index="tpf8" modelUID="r:00000000-0000-4000-0000-011c895902e8(jetbrains.mps.lang.generator.structure)" version="2" implicit="yes" />
   <import index="tpee" modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="3" implicit="yes" />
@@ -37,8 +37,8 @@
         <node role="body" roleId="tpee.1137022507850" type="tpee.StatementList" typeId="tpee.1068580123136" id="9128626556287054468">
           <node role="statement" roleId="tpee.1068581517665" type="tpee.ExpressionStatement" typeId="tpee.1068580123155" id="9128626556287054469">
             <node role="expression" roleId="tpee.1068580123156" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="398466520553204194">
-              <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="kj8g.398466520553202973" resolveInfo="createDatabase" />
-              <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="kj8g.2900074371115341375" resolveInfo="ERHelper" />
+              <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="k2do.398466520553234222" resolveInfo="createDatabase" />
+              <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="k2do.398466520553234197" resolveInfo="ERHelper" />
               <node role="actualArgument" roleId="tpee.1068499141038" type="tpf8.TemplateFunctionParameter_sourceNode" typeId="tpf8.1167169188348" id="398466520553204195" />
             </node>
           </node>

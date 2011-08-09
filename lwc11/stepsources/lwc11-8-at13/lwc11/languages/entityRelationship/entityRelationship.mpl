@@ -12,6 +12,7 @@
       <external-templates />
       <dependencies>
         <dependency reexport="false">c30ec168-61b1-4fe2-804f-281e73acb02c(entities#7853931227643479890)</dependency>
+        <dependency reexport="false">c25493f1-5412-4b92-935e-2efdc2fc2909(entityRelationship#9128626556287054463)</dependency>
       </dependencies>
       <usedDevKits>
         <usedDevKit>2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)</usedDevKit>
