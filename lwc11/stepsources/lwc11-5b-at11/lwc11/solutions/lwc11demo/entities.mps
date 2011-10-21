@@ -60,7 +60,9 @@
       <link role="entity" roleId="111v.7853931227643498016" targetNodeId="7853931227643487953" resolveInfo="Car" />
       <node role="values" roleId="111v.7853931227643499142" type="111v.EntityAttributeValue" typeId="111v.7853931227643498014" id="2988397862489064163">
         <link role="attribute" roleId="111v.7853931227643498015" targetNodeId="7853931227643487954" resolveInfo="make" />
-        <node role="expr" roleId="111v.7853931227643499136" type="111v.EAVExpression" typeId="111v.7853931227643498034" id="2988397862489064164" />
+        <node role="expr" roleId="111v.7853931227643499136" type="111v.StringConstantExpression" typeId="111v.7853931227643500857" id="5913024217110959004">
+          <property name="value" nameId="111v.7853931227643500858" value="BMW" />
+        </node>
       </node>
     </node>
     <node role="contents" roleId="jv2p.7853931227643329494" type="111v.EntityInstance" typeId="111v.7853931227643494224" id="2988397862489052369">
@@ -80,7 +82,9 @@
       </node>
       <node role="values" roleId="111v.7853931227643499142" type="111v.EntityAttributeValue" typeId="111v.7853931227643498014" id="2988397862489052374">
         <link role="attribute" roleId="111v.7853931227643498015" targetNodeId="7853931227643477952" resolveInfo="age" />
-        <node role="expr" roleId="111v.7853931227643499136" type="111v.EAVExpression" typeId="111v.7853931227643498034" id="2988397862489052375" />
+        <node role="expr" roleId="111v.7853931227643499136" type="111v.IntConstantExpression" typeId="111v.7853931227643500852" id="5913024217110959006">
+          <property name="value" nameId="111v.7853931227643500853" value="42" />
+        </node>
       </node>
       <node role="values" roleId="111v.7853931227643499142" type="111v.EntityAttributeValue" typeId="111v.7853931227643498014" id="2988397862489052376">
         <link role="attribute" roleId="111v.7853931227643498015" targetNodeId="7853931227643475363" resolveInfo="car" />
