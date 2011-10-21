@@ -30,7 +30,7 @@
       </node>
       <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="2900074371115301232">
         <property name="name" nameId="tpck.1169194664001" value="greeting" />
-        <node role="type" roleId="jv2p.7853931227643443463" type="tpee.IntegerType" typeId="tpee.1070534370425" id="2900074371115319861" />
+        <node role="type" roleId="jv2p.7853931227643443463" type="tpee.StringType" typeId="tpee.1225271177708" id="5913024217110974939" />
         <node role="derivationExpression" roleId="jv2p.2900074371115283855" type="tpee.TernaryOperatorExpression" typeId="tpee.1163668896201" id="2900074371115319690">
           <node role="condition" roleId="tpee.1163668914799" type="tpee.EqualsExpression" typeId="tpee.1068580123152" id="2900074371115319695">
             <node role="rightExpression" roleId="tpee.1081773367579" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="2900074371115319698">
@@ -84,7 +84,7 @@
       </node>
       <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="7853931227643494776">
         <property name="name" nameId="tpck.1169194664001" value="firstName" />
-        <node role="type" roleId="jv2p.7853931227643443463" type="tpee.IntegerType" typeId="tpee.1070534370425" id="2900074371115319860" />
+        <node role="type" roleId="jv2p.7853931227643443463" type="tpee.StringType" typeId="tpee.1225271177708" id="5913024217110979932" />
       </node>
     </node>
     <node role="contents" roleId="jv2p.7853931227643329494" type="111v.EntityInstance" typeId="111v.7853931227643494224" id="7853931227643500690">
