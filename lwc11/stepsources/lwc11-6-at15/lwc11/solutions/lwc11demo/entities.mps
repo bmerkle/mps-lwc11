@@ -80,17 +80,17 @@
       <property name="name" nameId="tpck.1169194664001" value="Person" />
       <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="7853931227643494773">
         <property name="name" nameId="tpck.1169194664001" value="name" />
-        <node role="type" roleId="jv2p.7853931227643443463" type="tpee.IntegerType" typeId="tpee.1070534370425" id="2900074371115283847" />
+        <node role="type" roleId="jv2p.7853931227643443463" type="tpee.StringType" typeId="tpee.1225271177708" id="8800753791265503956" />
       </node>
       <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="7853931227643494776">
-        <property name="name" nameId="tpck.1169194664001" value="firstName" />
+        <property name="name" nameId="tpck.1169194664001" value="greeting" />
         <node role="type" roleId="jv2p.7853931227643443463" type="tpee.StringType" typeId="tpee.1225271177708" id="2900074371115283848" />
-        <node role="derivationExpression" roleId="jv2p.2900074371115283855" type="tpee.PlusExpression" typeId="tpee.1068581242875" id="2988397862489075303">
-          <node role="rightExpression" roleId="tpee.1081773367579" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="2988397862489075306">
-            <property name="value" nameId="tpee.1070475926801" value="Hallo" />
-          </node>
-          <node role="leftExpression" roleId="tpee.1081773367580" type="jv2p.EARefExpr" typeId="jv2p.2900074371115301236" id="2988397862489075302">
+        <node role="derivationExpression" roleId="jv2p.2900074371115283855" type="tpee.PlusExpression" typeId="tpee.1068581242875" id="8800753791265498761">
+          <node role="rightExpression" roleId="tpee.1081773367579" type="jv2p.EARefExpr" typeId="jv2p.2900074371115301236" id="8800753791265503756">
             <link role="attribute" roleId="jv2p.2900074371115301237" targetNodeId="7853931227643494773" resolveInfo="name" />
+          </node>
+          <node role="leftExpression" roleId="tpee.1081773367580" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="2988397862489075306">
+            <property name="value" nameId="tpee.1070475926801" value="Hallo " />
           </node>
         </node>
       </node>
@@ -100,22 +100,11 @@
       <link role="entity" roleId="111v.7853931227643498016" targetNodeId="7853931227643494772" resolveInfo="Person" />
       <node role="values" roleId="111v.7853931227643499142" type="111v.EntityAttributeValue" typeId="111v.7853931227643498014" id="7853931227643500850">
         <link role="attribute" roleId="111v.7853931227643498015" targetNodeId="7853931227643494773" resolveInfo="name" />
-        <node role="expr" roleId="111v.7853931227643499136" type="tpee.MulExpression" typeId="tpee.1092119917967" id="2988397862489065093">
-          <node role="leftExpression" roleId="tpee.1081773367580" type="tpee.IntegerConstant" typeId="tpee.1068580320020" id="2988397862489065094">
-            <property name="value" nameId="tpee.1068580320021" value="100" />
-          </node>
-          <node role="rightExpression" roleId="tpee.1081773367579" type="tpee.IntegerConstant" typeId="tpee.1068580320020" id="2988397862489065095">
-            <property name="value" nameId="tpee.1068580320021" value="2" />
-          </node>
-        </node>
-      </node>
-      <node role="values" roleId="111v.7853931227643499142" type="111v.EntityAttributeValue" typeId="111v.7853931227643498014" id="7853931227643502765">
-        <link role="attribute" roleId="111v.7853931227643498015" targetNodeId="7853931227643494776" resolveInfo="firstName" />
-        <node role="expr" roleId="111v.7853931227643499136" type="tpee.PlusExpression" typeId="tpee.1068581242875" id="2988397862489065096">
-          <node role="rightExpression" roleId="tpee.1081773367579" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="2988397862489065099">
+        <node role="expr" roleId="111v.7853931227643499136" type="tpee.PlusExpression" typeId="tpee.1068581242875" id="8800753791265503958">
+          <node role="rightExpression" roleId="tpee.1081773367579" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="8800753791265503961">
             <property name="value" nameId="tpee.1070475926801" value="Voelter" />
           </node>
-          <node role="leftExpression" roleId="tpee.1081773367580" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="2900074371115283850">
+          <node role="leftExpression" roleId="tpee.1081773367580" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="8800753791265503957">
             <property name="value" nameId="tpee.1070475926801" value="Markus" />
           </node>
         </node>

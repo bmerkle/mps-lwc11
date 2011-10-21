@@ -79,19 +79,31 @@
     <node role="contents" roleId="jv2p.7853931227643329494" type="jv2p.Entity" typeId="jv2p.7853931227643329492" id="7853931227643494772">
       <property name="name" nameId="tpck.1169194664001" value="Person" />
       <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="7853931227643494773">
-        <property name="name" nameId="tpck.1169194664001" value="name" />
+        <property name="name" nameId="tpck.1169194664001" value="age" />
         <node role="type" roleId="jv2p.7853931227643443463" type="tpee.IntegerType" typeId="tpee.1070534370425" id="2900074371115283847" />
       </node>
       <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="7853931227643494776">
         <property name="name" nameId="tpck.1169194664001" value="firstName" />
         <node role="type" roleId="jv2p.7853931227643443463" type="tpee.StringType" typeId="tpee.1225271177708" id="5913024217110979932" />
       </node>
+      <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="8800753791265505269">
+        <property name="name" nameId="tpck.1169194664001" value="greeting" />
+        <node role="type" roleId="jv2p.7853931227643443463" type="tpee.StringType" typeId="tpee.1225271177708" id="8800753791265505270" />
+        <node role="derivationExpression" roleId="jv2p.2900074371115283855" type="tpee.PlusExpression" typeId="tpee.1068581242875" id="8800753791265505273">
+          <node role="leftExpression" roleId="tpee.1081773367580" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="8800753791265505272">
+            <property name="value" nameId="tpee.1070475926801" value="Hallo" />
+          </node>
+          <node role="rightExpression" roleId="tpee.1081773367579" type="jv2p.EARefExpr" typeId="jv2p.2900074371115301236" id="8800753791265505278">
+            <link role="attribute" roleId="jv2p.2900074371115301237" targetNodeId="7853931227643494776" resolveInfo="firstName" />
+          </node>
+        </node>
+      </node>
     </node>
     <node role="contents" roleId="jv2p.7853931227643329494" type="111v.EntityInstance" typeId="111v.7853931227643494224" id="7853931227643500690">
       <property name="name" nameId="tpck.1169194664001" value="p" />
       <link role="entity" roleId="111v.7853931227643498016" targetNodeId="7853931227643494772" resolveInfo="Person" />
       <node role="values" roleId="111v.7853931227643499142" type="111v.EntityAttributeValue" typeId="111v.7853931227643498014" id="7853931227643500850">
-        <link role="attribute" roleId="111v.7853931227643498015" targetNodeId="7853931227643494773" resolveInfo="name" />
+        <link role="attribute" roleId="111v.7853931227643498015" targetNodeId="7853931227643494773" resolveInfo="age" />
         <node role="expr" roleId="111v.7853931227643499136" type="tpee.IntegerConstant" typeId="tpee.1068580320020" id="2900074371115283849">
           <property name="value" nameId="tpee.1068580320021" value="100" />
         </node>
