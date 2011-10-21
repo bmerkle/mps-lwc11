@@ -22,10 +22,6 @@
         <property name="name" nameId="tpck.1169194664001" value="age" />
         <node role="type" roleId="jv2p.7853931227643443463" type="jv2p.StringType" typeId="jv2p.7853931227643443490" id="7853931227643477953" />
       </node>
-      <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="7853931227643487594">
-        <property name="name" nameId="tpck.1169194664001" value="age" />
-        <node role="type" roleId="jv2p.7853931227643443463" type="jv2p.StringType" typeId="jv2p.7853931227643443490" id="7853931227643487595" />
-      </node>
       <node role="attributes" roleId="jv2p.7853931227643443472" type="jv2p.EntityAttribute" typeId="jv2p.7853931227643443459" id="7853931227643475363">
         <property name="name" nameId="tpck.1169194664001" value="car" />
         <node role="type" roleId="jv2p.7853931227643443463" type="jv2p.EntityType" typeId="jv2p.7853931227643473136" id="7853931227643475368">
